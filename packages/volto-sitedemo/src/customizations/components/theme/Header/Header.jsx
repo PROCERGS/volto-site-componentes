@@ -40,7 +40,6 @@ const InternetHeader = ({
   const navRoot = useSelector((state) => state.navroot?.data?.navroot);
   const nome_sec = navRoot?.nome_secretaria_vinculada;
   const url_sec = navRoot?.url_secretaria_vinculada;
-  console.log(navRoot);
 
   return (
     <>

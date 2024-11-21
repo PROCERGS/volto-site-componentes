@@ -10,7 +10,7 @@ const RedesSociais = () => {
     <div className="redes-container">
       <h1 className="redes-titulo">Redes Sociais</h1>
       <div className="redes">
-        <a href="https://www.facebook.com/Procergs/?locale=pt_BR">
+        <a href="https://www.facebook.com/Procergs">
           <img src={facebook} alt="facebook" />
         </a>
         <a href="/">

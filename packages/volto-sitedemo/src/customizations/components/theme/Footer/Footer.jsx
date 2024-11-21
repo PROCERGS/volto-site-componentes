@@ -22,7 +22,7 @@ const Footer = ({ intl }) => {
         <div className="footer-site-nome">
           <SeloGoverno />
         </div>
-        <SiteMapFooter location="\" />
+        <SiteMapFooter location="/" />
         <RedesSociais />
       </div>
       <div className="footer-logo">

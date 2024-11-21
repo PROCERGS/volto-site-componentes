@@ -45,21 +45,26 @@ function Sitemap(props) {
   }, [pathname, lang, getNavigation]);
 
   const renderItems = (items) => {
-    console.log('ITENS AQUI', items);
     return (
       <ul className="rodape__mapa-site">
         {items.map((item) => (
-          <li className="rodape__mapa-site__item" key={item.title}>
-            <Link to={item.url}>{item.title}</Link>
-            <ul>
-              {item.items &&
-                item.items.map((innerItem) => (
-                  <li key={item.title}>
-                    <Link to={innerItem.url}>{innerItem.title}</Link>
-                  </li>
-                ))}
-            </ul>
-          </li>
+          <>
+            {item.items.length > 0 && (
+              <li className="rodape__mapa-site__item" key={item.title}>
+                <Link to={item.url} className="rodape-titulo">
+                  {item.title}
+                </Link>
+                <ul>
+                  {item.items &&
+                    item.items.map((innerItem) => (
+                      <li key={item.title}>
+                        <Link to={innerItem.url}>{innerItem.title}</Link>
+                      </li>
+                    ))}
+                </ul>
+              </li>
+            )}
+          </>
         ))}
       </ul>
     );

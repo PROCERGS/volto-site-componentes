@@ -1,28 +1,38 @@
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
   .rodape__mapa-site {
-    -webkit-column-count: 4;
-    -moz-column-count: 4;
+    flex-direction: column;
   }
 }
 
 .rodape__mapa-site {
   display: flex;
-  overflow: hidden;
-  width: 25%;
-  flex-direction: column;
   padding-left: 0;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 
 .rodape__mapa-site li {
   margin-bottom: 10px;
   justify-items: left;
   list-style-type: none;
+  text-align: left;
 }
 
 .rodape__mapa-site__item ul li {
+  padding-left: 0px;
   list-style-type: none;
+}
+
+.rodape__mapa-site__item ul li a {
+  font-size: 14px;
+}
+
+.rodape__mapa-site__item ul {
+  padding-left: 0px;
+  list-style-type: none;
+}
+
+.rodape__mapa-site__item > a {
+  font-weight: 100;
+  text-transform: uppercase;
 }
 
 @media screen and (min-width: 768px) {
