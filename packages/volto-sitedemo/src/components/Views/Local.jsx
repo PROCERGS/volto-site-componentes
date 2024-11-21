@@ -8,9 +8,9 @@ const LocalView = (props) => {
 
   return (
     <Container id="page-document" className="view-wrapper local-view">
+      {content && <h2>{content.description}</h2>}
       <Endereco content={content} />
       <Contato content={content} />
-      {content && <h2>{content.description}</h2>}
     </Container>
   );
 };
