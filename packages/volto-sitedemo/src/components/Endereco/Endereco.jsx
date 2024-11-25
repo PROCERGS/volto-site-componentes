@@ -1,5 +1,5 @@
 import React from 'react';
-import { div } from 'semantic-ui-react';
+import { GoogleMap, LoadScript } from '@react-google-maps/api';
 
 const Endereco = ({ content }) => {
   const {
@@ -13,8 +13,33 @@ const Endereco = ({ content }) => {
     coordenadas,
   } = content;
 
+  const containerStyle = { width: '100%', height: '400px' };
+
+  let center = null;
+
+  if (coordenadas) {
+    const [lat, lng] = coordenadas
+      .split(',')
+      .map((coord) => parseFloat(coord.trim()));
+
+    if (!isNaN(lat) && !isNaN(lng)) {
+      center = { lat, lng };
+    }
+  }
+
   return (
     <div className="endereco-wrapper">
+      {center && (
+        <div>
+          <LoadScript googleMapsApiKey={process.env.APP_GOOGLE_MAPS_API_KEY}>
+            <GoogleMap
+              mapContainerStyle={containerStyle}
+              center={center}
+              zoom={15}
+            />
+          </LoadScript>
+        </div>
+      )}
       <div>
         {logradouro && (
           <>
@@ -36,17 +61,6 @@ const Endereco = ({ content }) => {
           </>
         )}
       </div>
-      {coordenadas && (
-        <div>
-          <a
-            href={`https://www.google.com/maps?q=${coordenadas}`}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Ver no Google Maps
-          </a>
-        </div>
-      )}
     </div>
   );
 };

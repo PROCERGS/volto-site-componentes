@@ -10,6 +10,8 @@ import locaisSVG from '@plone/volto/icons/home.svg';
 import defaultReducers from '@plone/volto/reducers';
 import locais from './reducers/locais/locais';
 
+import EnderecoNew from './components/LocalTeaser/EnderecoTemplate';
+
 const applyConfig = (config) => {
   config.widgets.widget.lista_telefones = ListaTelefones;
 
@@ -41,6 +43,16 @@ const applyConfig = (config) => {
     locais,
   };
   config.addonReducers = { ...config.addonReducers, ...localReducers };
+
+  config.blocks.blocksConfig.teaser.variations = [
+    ...config.blocks.blocksConfig.teaser.variations,
+    {
+      id: 'local',
+      title: 'Local',
+      isDefault: true,
+      template: EnderecoNew,
+    },
+  ];
 
   return config;
 };

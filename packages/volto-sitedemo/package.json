@@ -27,6 +27,7 @@
     "release-alpha": "release-it --preRelease=alpha"
   },
   "dependencies": {
+    "@react-google-maps/api": "*",
     "@eeacms/volto-accordion-block": "*",
     "@kitconcept/volto-button-block": "*",
     "@kitconcept/volto-heading-block": "*",

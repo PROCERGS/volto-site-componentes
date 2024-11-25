@@ -21,6 +21,11 @@ msgstr ""
 msgid "Cabeçalho"
 msgstr ""
 
+#. Default: "Escolha um Local"
+#: components/LocalTeaser/EnderecoTemplate
+msgid "Escolha um Local"
+msgstr ""
+
 #. Default: "Locais"
 #: components/Blocks/LocaisBlock/schema
 msgid "Locais"
