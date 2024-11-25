@@ -2,6 +2,9 @@
   .rodape__mapa-site {
     flex-direction: column;
   }
+  .rodape__mapa-site__item {
+    padding-bottom: 30px;
+  }
 }
 
 .rodape__mapa-site {
@@ -14,6 +17,7 @@
   list-style-type: none;
   text-align: left;
 }
+
 .rodape__mapa-site__item:nth-child(n + 5) {
   display: none;
 }
