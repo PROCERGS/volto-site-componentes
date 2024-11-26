@@ -1,14 +1,7 @@
 import React from 'react';
 import { GoogleMap, LoadScript } from '@react-google-maps/api';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faLocation,
-  faLocationArrow,
-  faLocationCrosshairs,
-  faLocationPin,
-  faMapLocation,
-  faMapLocationDot,
-} from '@fortawesome/free-solid-svg-icons';
+import { faLocationPin } from '@fortawesome/free-solid-svg-icons';
 
 const Endereco = ({ content }) => {
   const {
