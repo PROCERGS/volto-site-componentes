@@ -16,6 +16,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
 import { Icon, Toast } from '@plone/volto/components';
+import Contato from '../Contato/Contato';
 
 const messages = defineMessages({
   PleaseChooseContent: {
@@ -73,10 +74,10 @@ const EnderecoTemplate = (props) => {
                 {data?.head_title && (
                   <div className="headline">{data.head_title}</div>
                 )}
-                <h2>{data?.title}</h2>
                 {!data.hide_description && <p>{data?.description}</p>}
 
                 {local && <Endereco content={local} />}
+                {local && <Contato content={local} />}
               </div>
             </div>
           </MaybeWrap>

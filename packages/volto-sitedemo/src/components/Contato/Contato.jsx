@@ -32,6 +32,7 @@ const Contato = ({ content }) => {
       <div>
         {tel_comercial && (
           <span className="telefone-tel_comercial">
+            <strong>Telefone Comercial: </strong>
             {formatPhoneNumber(tel_comercial)}
           </span>
         )}
@@ -39,7 +40,32 @@ const Contato = ({ content }) => {
       <div>
         {tel_celular && (
           <span className="telefone-tel_celular">
+            <strong>Telefone Celular: </strong>
             {formatPhoneNumber(tel_celular)}
+          </span>
+        )}
+      </div>
+      <div>
+        {url && (
+          <span className="telefone-url">
+            <strong>URL: </strong>
+            {url}
+          </span>
+        )}
+      </div>
+      <div>
+        {email && (
+          <span className="telefone-email">
+            <strong>E-mail: </strong>
+            {email}
+          </span>
+        )}
+      </div>
+      <div>
+        {whatsapp && (
+          <span className="telefone-whatsapp">
+            <strong>WhatsApp: </strong>
+            {whatsapp}
           </span>
         )}
       </div>

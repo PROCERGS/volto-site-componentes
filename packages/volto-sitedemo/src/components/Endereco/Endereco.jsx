@@ -1,12 +1,23 @@
 import React from 'react';
 import { GoogleMap, LoadScript } from '@react-google-maps/api';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faLocation,
+  faLocationArrow,
+  faLocationCrosshairs,
+  faLocationPin,
+  faMapLocation,
+  faMapLocationDot,
+} from '@fortawesome/free-solid-svg-icons';
 
 const Endereco = ({ content }) => {
   const {
+    title,
     logradouro,
     complemento,
-    cidade,
+    municipio,
     estado,
+    pais,
     cep,
     numero,
     bairro,
@@ -41,26 +52,35 @@ const Endereco = ({ content }) => {
         </div>
       )}
       <div>
+        {title && (
+          <div className="titulo-wrapper-endereco">
+            <FontAwesomeIcon icon={faLocationPin} />
+            <span className="titulo">{title}</span>
+          </div>
+        )}
+      </div>
+      <div>
         {logradouro && (
           <>
             <span className="logradouro">{logradouro}</span>
             {numero && <span className="numero">, {numero}</span>}
+            {bairro && <span className="bairro">- {bairro}</span>}
           </>
         )}
       </div>
       <div>
         {complemento && <span className="complemento">{complemento}</span>}
       </div>
-      <div>{bairro && <span className="bairro">{bairro}</span>}</div>
-      <div>{cep && <span className="cep">{cep}</span>}</div>
       <div>
-        {cidade && (
+        {municipio && (
           <>
-            <span className="cidade">{cidade}</span>
+            <span className="municipio">{municipio}</span>
             {estado && <span className="estado"> - {estado.token}</span>}
+            {pais && <span className="pais"> - {pais}</span>}
           </>
         )}
       </div>
+      <div>{cep && <span className="cep">{cep}</span>}</div>
     </div>
   );
 };
