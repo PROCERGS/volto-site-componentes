@@ -67,7 +67,7 @@ const InternetHeader = ({
             <SimboloRS />
             <div className="header-titulo">{siteTitle}</div>
           </div>
-          {/*<Navigation pathname={pathname} />*/}
+          <Navigation pathname={pathname} />
           <MobileNavigation pathname={pathname} />
           <div className="search-wrapper navigation-desktop">
             <div className="search">
