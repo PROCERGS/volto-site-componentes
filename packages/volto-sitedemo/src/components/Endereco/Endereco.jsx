@@ -48,32 +48,36 @@ const Endereco = ({ content }) => {
         {title && (
           <div className="titulo-wrapper-endereco">
             <FontAwesomeIcon icon={faLocationPin} />
-            <span className="titulo">{title}</span>
+            <span className="titulo-endereco">{title}</span>
           </div>
         )}
       </div>
       <div>
         {logradouro && (
           <>
-            <span className="logradouro">{logradouro}</span>
-            {numero && <span className="numero">, {numero}</span>}
-            {bairro && <span className="bairro">- {bairro}</span>}
+            <span className="logradouro-endereco">{logradouro}</span>
+            {numero && <span className="numero-endereco">, {numero}</span>}
+            {bairro && <span className="bairro-endereco">- {bairro}</span>}
           </>
         )}
       </div>
       <div>
-        {complemento && <span className="complemento">{complemento}</span>}
+        {complemento && (
+          <span className="complemento-endereco">{complemento}</span>
+        )}
       </div>
       <div>
         {municipio && (
           <>
-            <span className="municipio">{municipio}</span>
-            {estado && <span className="estado"> - {estado.token}</span>}
-            {pais && <span className="pais"> - {pais}</span>}
+            <span className="municipio-endereco">{municipio}</span>
+            {estado && (
+              <span className="estado-endereco"> - {estado.token}</span>
+            )}
+            {pais && <span className="pais-endereco"> - {pais}</span>}
           </>
         )}
       </div>
-      <div>{cep && <span className="cep">{cep}</span>}</div>
+      <div>{cep && <span className="cep-endereco">{cep}</span>}</div>
     </div>
   );
 };

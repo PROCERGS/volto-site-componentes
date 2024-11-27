@@ -49,7 +49,7 @@ const Contato = ({ content }) => {
         {url && (
           <span className="telefone-url">
             <strong>URL: </strong>
-            {url}
+            <a href={url}>{url}</a>
           </span>
         )}
       </div>
