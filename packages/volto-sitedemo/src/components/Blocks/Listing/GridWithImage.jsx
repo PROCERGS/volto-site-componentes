@@ -1,6 +1,9 @@
 import React from 'react';
 import { flattenToAppURL } from '@plone/volto/helpers';
-import { Link } from 'react-router-dom';
+import { Link, Image } from 'react-router-dom';
+import { Container as SemanticContainer } from 'semantic-ui-react';
+import config from '@plone/volto/registry';
+import PreviewLink from '../../PreviewLink/PreviewLink';
 
 const GridWithImage = ({ items = [] }) => {
   console.log(items);
@@ -12,12 +15,11 @@ const GridWithImage = ({ items = [] }) => {
           <Link to={item.url}>
             <div className="grid-item" key={item['@id']}>
               <div className="image">
-                <img
-                  src={
-                    item.image_scales?.imagem[0]?.download ||
-                    '/icone-servico-servidor.png'
-                  }
-                  alt={item.title || 'Image'}
+                <PreviewLink
+                  item={item}
+                  alt={item.image_caption}
+                  className="grid-image"
+                  loading="lazy"
                 />
               </div>
               <div className="content">

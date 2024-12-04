@@ -1,6 +1,5 @@
 .grid-with-image {
   display: flex;
-  max-width: 1200px;
   flex-direction: column;
   align-items: center;
   padding: 10px;
@@ -15,9 +14,10 @@
 }
 
 .grid-item {
-  width: 25vw;
+  display: flex;
+  max-width: 350px;
   min-height: 272px;
-  padding: 15px;
+  flex-direction: column;
   background: #f9f9f9;
   text-align: center;
   transition:
@@ -30,20 +30,41 @@
   transform: scale(1.05);
 }
 
+.grid-item .image {
+  display: flex;
+  overflow: hidden;
+  width: auto;
+  height: 200px;
+  align-items: center;
+  justify-content: center;
+}
+
 .grid-item .image img {
   width: 100%;
-  max-width: 150px;
-  height: auto;
-  margin-bottom: 10px;
+  min-width: 400px;
+  height: 100%;
+  object-fit: cover;
 }
 
 .grid-item .content h3 {
-  margin: 10px 0;
+  display: -webkit-box;
+  overflow: hidden;
+  padding: 0 15px;
+  margin: 15px 0;
+  -webkit-box-orient: vertical;
   color: #333;
   font-size: 18px;
+  -webkit-line-clamp: 2;
+  text-align: left;
+  text-overflow: ellipsis;
+}
+
+.grid-item > * {
+  justify-items: left;
 }
 
 .grid-item .content p {
+  padding: 0 15px 15px 15px;
   color: #666;
   font-size: 14px;
 }
