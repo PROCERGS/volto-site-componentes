@@ -1,4 +1,5 @@
 import ListaTelefones from './components/ListaTelefones/ListaTelefones';
+import GridWithImage from './components/Blocks/Listing/GridWithImage';
 
 //Locais
 import LocalView from './components/Views/Local';
@@ -51,6 +52,15 @@ const applyConfig = (config) => {
       title: 'Local',
       isDefault: true,
       template: EnderecoNew,
+    },
+  ];
+
+  config.blocks.blocksConfig.listing.variations = [
+    ...(config.blocks.blocksConfig.listing.variations || []),
+    {
+      id: 'grid-with-image',
+      title: 'Grid with Image',
+      template: GridWithImage,
     },
   ];
 
