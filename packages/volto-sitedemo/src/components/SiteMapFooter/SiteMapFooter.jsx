@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { compose } from 'redux';
 import { connect } from 'react-redux';
@@ -48,7 +48,7 @@ function Sitemap(props) {
     return (
       <ul className="rodape__mapa-site">
         {items.map((item) => (
-          <>
+          <React.Fragment key={item.title}>
             {item.items.length > 0 && (
               <li className="rodape__mapa-site__item" key={item.title}>
                 <Link to={item.url} className="rodape-titulo">
@@ -64,7 +64,7 @@ function Sitemap(props) {
                 </ul>
               </li>
             )}
-          </>
+          </React.Fragment>
         ))}
       </ul>
     );
