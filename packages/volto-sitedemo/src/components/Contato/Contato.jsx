@@ -28,7 +28,7 @@ const Contato = ({ content }) => {
   } = content;
 
   return (
-    <div className="telefone-wrapper">
+    <div className="contato-wrapper">
       <div>
         {tel_comercial && (
           <span className="telefone-tel_comercial">
@@ -66,6 +66,62 @@ const Contato = ({ content }) => {
           <span className="telefone-whatsapp">
             <strong>WhatsApp: </strong>
             {whatsapp}
+          </span>
+        )}
+      </div>
+      <div>
+        {fax && (
+          <span className="fax">
+            <strong>Fax: </strong>
+            {fax}
+          </span>
+        )}
+      </div>
+      <div>
+        {telefone_fax && (
+          <span className="telefone-fax">
+            <strong>Telefone/Fax: </strong>
+            {telefone_fax}
+          </span>
+        )}
+      </div>
+      <div>
+        {skype && (
+          <span className="skype">
+            <strong>Skype: </strong>
+            {skype}
+          </span>
+        )}
+      </div>
+      <div>
+        {voip && (
+          <span className="voip">
+            <strong>VOIP: </strong>
+            {voip}
+          </span>
+        )}
+      </div>
+      <div>
+        {telefones && (
+          <span className="telefones">
+            <strong>Telefones: </strong>
+            {telefones}
+          </span>
+        )}
+      </div>
+      <div>
+        {link_whatsapp && (
+          <span className="link-whatsapp">
+            <strong>Whatsapp: </strong>
+            {link_whatsapp}
+          </span>
+        )}
+      </div>
+      <div>
+        {horarios && (
+          <span className="horarios">
+            <strong>Horarios: </strong>
+            {horarios}
           </span>
         )}
       </div>

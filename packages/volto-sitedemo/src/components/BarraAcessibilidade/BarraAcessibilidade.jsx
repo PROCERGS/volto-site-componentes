@@ -1,8 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-  faCircleHalfStroke,
-  faCookie,
   faEnvelope,
   faSitemap,
   faUniversalAccess,
@@ -10,33 +8,27 @@ import {
 import { Link } from 'react-router-dom';
 
 const BarraAcessibilidade = () => {
-  const [theme, setTheme] = useState('light');
-
-  const toogleTheme = () => {
-    setTheme(theme === 'light' ? 'dark' : 'light');
-  };
-
   return (
     <div className="acess-wrapper">
       <div className="acess-right">
         <ul className="acess-ul">
           <li>
-            <a accessKey="1" title="Ir para o conteúdo">
+            <a title="Ir para o conteúdo" href="#conteudoInicio">
               Conteúdo [1]
             </a>{' '}
           </li>
           <li>
-            <a accessKey="2" title="Ir para o menu">
+            <a title="Ir para o menu" href="#menuInicio">
               Menu [2]
             </a>{' '}
           </li>
           <li>
-            <a accessKey="3" title="Ir para a busca">
+            <a title="Ir para a busca" href="#buscageralTextBox">
               Busca [3]
             </a>{' '}
           </li>
           <li>
-            <a>
+            <a href="/acessibilidade">
               <FontAwesomeIcon icon={faUniversalAccess} /> Acessibilidade
             </a>
           </li>
@@ -44,22 +36,6 @@ const BarraAcessibilidade = () => {
       </div>
       <div className="acess-left">
         <ul className="acess-ul">
-          <li>
-            <a
-              title={theme === 'light' ? 'Contraste normal' : 'Alto Contraste'}
-              onClick={toogleTheme}
-            >
-              <FontAwesomeIcon
-                icon={faCircleHalfStroke}
-                flip={theme === 'light' ? undefined : 'horizontal'}
-              />{' '}
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <FontAwesomeIcon icon={faCookie} />
-            </a>
-          </li>
           <li>
             <a href="/contact-form">
               <FontAwesomeIcon icon={faEnvelope} />

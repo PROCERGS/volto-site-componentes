@@ -7,15 +7,10 @@ import { MaybeWrap } from '@plone/volto/components';
 import { UniversalLink } from '@plone/volto/components';
 import cx from 'classnames';
 import Endereco from '../Endereco/Endereco';
-import {
-  flattenToAppURL,
-  messages as defaultMessages,
-} from '@plone/volto/helpers';
+import { flattenToAppURL } from '@plone/volto/helpers';
 import { getContent } from '@plone/volto/actions';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { useEffect, useState } from 'react';
-import { toast } from 'react-toastify';
-import { Icon, Toast } from '@plone/volto/components';
 import Contato from '../Contato/Contato';
 
 const messages = defineMessages({
@@ -37,16 +32,10 @@ const EnderecoTemplate = (props) => {
   useEffect(() => {
     if (link) {
       const fetchData = async () => {
-        try {
-          const response = await dispatch(
-            getContent(flattenToAppURL(link), null, `${block}-teaser`),
-          );
-          {
-            response && setLocal(response);
-          }
-        } catch (error) {
-          console.error('Error fetching content:', error);
-        }
+        const response = await dispatch(
+          getContent(flattenToAppURL(link), null, `${block}-teaser`),
+        );
+        response && setLocal(response);
       };
       fetchData();
     }

@@ -5,7 +5,6 @@ import { UniversalLink } from '@plone/volto/components';
 import Endereco from '../../Endereco/Endereco';
 
 const LocalSummary = ({ content }) => {
-  const { gestor } = content;
   return (
     <Container className={`Local summary`}>
       <h4>

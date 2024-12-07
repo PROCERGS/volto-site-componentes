@@ -6,7 +6,7 @@ const addons = [
   "@kitconcept/volto-highlight-block",
   "@kitconcept/volto-separator-block",
   "@kitconcept/volto-light-theme",
-
+  
   "@kitconcept/volto-dsgvo-banner",
 
   'volto-sitedemo'

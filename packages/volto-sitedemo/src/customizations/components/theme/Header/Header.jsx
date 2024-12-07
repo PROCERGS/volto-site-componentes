@@ -13,14 +13,11 @@ import { SearchBar } from '../../../../components/SearchBar/SearchBar';
 import {
   Anontools,
   LanguageSelector,
-  Logo,
   Navigation,
-  SearchWidget,
   UniversalLink,
 } from '@plone/volto/components';
 import BarraEstado from '../../../../components/BarraEstado/BarraEstado';
 import BarraAcessibilidade from '../../../../components/BarraAcessibilidade/BarraAcessibilidade';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import SecretariaNome from '../../../../components/SecretariaNome/SecretariaNome';
 
 const messages = defineMessages({
@@ -91,7 +88,6 @@ const IntranetHeader = ({
     <>
       <div className="header">
         <div className="tools-wrapper">
-          {secretaria && <SecretariaNome content={secretaria} />}
           <LanguageSelector />
           <div className="tools">
             {!token && <Anontools />}

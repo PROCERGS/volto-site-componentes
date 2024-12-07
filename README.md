@@ -3,9 +3,9 @@
 Site Demonstração
 
 [![npm](https://img.shields.io/npm/v/volto-sitedemo)](https://www.npmjs.com/package/volto-sitedemo)
-[![](https://img.shields.io/badge/-Storybook-ff4785?logo=Storybook&logoColor=white&style=flat-square)](https://PROCERGS.github.io/volto-sitedemo/)
-[![Code analysis checks](https://github.com/PROCERGS/volto-sitedemo/actions/workflows/code.yml/badge.svg)](https://github.com/PROCERGS/volto-sitedemo/actions/workflows/code.yml)
-[![Unit tests](https://github.com/PROCERGS/volto-sitedemo/actions/workflows/unit.yml/badge.svg)](https://github.com/PROCERGS/volto-sitedemo/actions/workflows/unit.yml)
+[![](https://img.shields.io/badge/-Storybook-ff4785?logo=Storybook&logoColor=white&style=flat-square)](https://procergs.github.io/volto-sitedemo/)
+[![Code analysis checks](https://github.com/procergs/volto-sitedemo/actions/workflows/code.yml/badge.svg)](https://github.com/procergs/volto-sitedemo/actions/workflows/code.yml)
+[![Unit tests](https://github.com/procergs/volto-sitedemo/actions/workflows/unit.yml/badge.svg)](https://github.com/procergs/volto-sitedemo/actions/workflows/unit.yml)
 
 ## Features
 
@@ -200,4 +200,4 @@ The project is licensed under the MIT license.
 
 ## Credits and Acknowledgements 🙏
 
-Crafted with care by **Generated using [Cookieplone (0.7.1)](https://github.com/plone/cookieplone) and [cookiecutter-plone (314a3e1)](https://github.com/plone/cookiecutter-plone/commit/314a3e1d47bb00bd8390e29c08b0e54f274f3b96) on 2024-10-02 14:59:50.236383**. A special thanks to all contributors and supporters!
+Crafted with care by **Generated using [Cookieplone (0.8.1)](https://github.com/plone/cookieplone) and [cookiecutter-plone (7a2b499)](https://github.com/plone/cookiecutter-plone/commit/7a2b4991b472634827b1866aa5b1bf695647b7a3) on 2024-12-06 16:15:05.868891**. A special thanks to all contributors and supporters!

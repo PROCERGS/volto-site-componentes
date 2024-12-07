@@ -1,10 +1,10 @@
 // src/components/widgets/TelephoneNumberListWidget.jsx
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Button, Input } from 'semantic-ui-react';
 
 const ListaTelefones = (props) => {
-  const { value = [], onChange, errors = [] } = props;
+  const { value = [], onChange } = props;
   const [numbers, setNumbers] = useState(value);
 
   const handleAdd = () => {

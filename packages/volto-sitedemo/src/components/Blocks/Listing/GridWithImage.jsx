@@ -1,18 +1,13 @@
 import React from 'react';
-import { flattenToAppURL } from '@plone/volto/helpers';
-import { Link, Image } from 'react-router-dom';
-import { Container as SemanticContainer } from 'semantic-ui-react';
-import config from '@plone/volto/registry';
+import { Link } from 'react-router-dom';
 import PreviewLink from '../../PreviewLink/PreviewLink';
 
 const GridWithImage = ({ items = [] }) => {
-  console.log(items);
-
   return (
     <div className="grid-with-image">
       <div className="grid">
         {items.map((item) => (
-          <Link to={item.url}>
+          <Link to={item.url} key={item['@id']}>
             <div className="grid-item" key={item['@id']}>
               <div className="image">
                 <PreviewLink

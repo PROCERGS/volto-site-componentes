@@ -11,10 +11,10 @@
     "react"
   ],
   "author": "PROCERGS",
-  "homepage": "https://github.com/PROCERGS/volto-sitedemo#readme",
+  "homepage": "https://github.com/procergs/volto-sitedemo#readme",
   "repository": {
     "type": "git",
-    "url": "git@github.com:PROCERGS/volto-sitedemo.git"
+    "url": "git@github.com:procergs/volto-sitedemo.git"
   },
   "publishConfig": {
     "access": "public"
@@ -41,6 +41,7 @@
 
     "@fortawesome/react-fontawesome": "*",
     "@fortawesome/free-solid-svg-icons": "*",
+
     "@kitconcept/volto-dsgvo-banner": "git://github.com/PROCERGS/volto-dsgvo-banner.git"
   },
   "peerDependencies": {

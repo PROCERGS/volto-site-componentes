@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Image } from 'semantic-ui-react';
 import LogoImage from './logo_Procergs.png';
-import { Container } from 'semantic-ui-react';
 import { UniversalLink } from '@plone/volto/components';
 
 const LogoProcergs = () => {

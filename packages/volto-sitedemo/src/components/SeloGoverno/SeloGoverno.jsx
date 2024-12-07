@@ -1,6 +1,5 @@
 import React from 'react';
 import { UniversalLink } from '@plone/volto/components';
-import { div } from 'semantic-ui-react';
 import LogoRS from './rslogo.svg';
 
 const SeloGoverno = () => {
