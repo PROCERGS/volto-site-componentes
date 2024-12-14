@@ -1397,8 +1397,8 @@ importers:
         specifier: '*'
         version: 0.13.0(encoding@0.1.13)
       '@eeacms/volto-accordion-block':
-        specifier: '*'
-        version: 11.0.3
+        specifier: ^10.4.6
+        version: 10.4.6
       '@fortawesome/free-solid-svg-icons':
         specifier: '*'
         version: 6.7.1
@@ -1406,28 +1406,28 @@ importers:
         specifier: '*'
         version: 0.2.2(@fortawesome/fontawesome-svg-core@6.7.1)(react@18.2.0)
       '@kitconcept/volto-button-block':
-        specifier: '*'
+        specifier: ^3.0.2
         version: 3.0.3(classnames@2.2.6)(react-dom@18.2.0(react@18.2.0))(react-intl@3.12.1(react@18.2.0))(react@18.2.0)
       '@kitconcept/volto-dsgvo-banner':
         specifier: git://github.com/PROCERGS/volto-dsgvo-banner.git
         version: https://codeload.github.com/PROCERGS/volto-dsgvo-banner/tar.gz/5975bbd8f62427b264bc4c1debc12c089a96467e
       '@kitconcept/volto-heading-block':
-        specifier: '*'
+        specifier: ^2.4.0
         version: 2.4.0(react@18.2.0)
       '@kitconcept/volto-highlight-block':
-        specifier: '*'
+        specifier: ^4.0.0
         version: 4.0.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@kitconcept/volto-introduction-block':
-        specifier: '*'
+        specifier: ^1.0.0
         version: 1.0.0
       '@kitconcept/volto-light-theme':
-        specifier: '*'
-        version: 5.0.2(@eeacms/volto-accordion-block@11.0.3)(@kitconcept/volto-button-block@3.0.3(classnames@2.2.6)(react-dom@18.2.0(react@18.2.0))(react-intl@3.12.1(react@18.2.0))(react@18.2.0))(@kitconcept/volto-dsgvo-banner@https://codeload.github.com/PROCERGS/volto-dsgvo-banner/tar.gz/5975bbd8f62427b264bc4c1debc12c089a96467e)(@kitconcept/volto-heading-block@2.4.0(react@18.2.0))(@kitconcept/volto-highlight-block@4.0.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@kitconcept/volto-introduction-block@1.0.0)(@kitconcept/volto-separator-block@4.1.2(react-dom@18.2.0(react@18.2.0))(react-intl@3.12.1(react@18.2.0))(react@18.2.0)(storybook@8.4.7(prettier@3.2.5)))(@kitconcept/volto-slider-block@6.3.1(@plone/volto@18.1.2(@babel/runtime@7.26.0)(@popperjs/core@2.11.8)(@types/react-dom@18.2.12)(@types/react@18.2.27)(react-with-direction@1.4.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(seamless-immutable@7.1.4))(embla-carousel@8.5.1)(react@18.2.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(storybook@8.4.7(prettier@3.2.5))
+        specifier: ^5.0.1
+        version: 5.0.2(@eeacms/volto-accordion-block@10.4.6)(@kitconcept/volto-button-block@3.0.3(classnames@2.2.6)(react-dom@18.2.0(react@18.2.0))(react-intl@3.12.1(react@18.2.0))(react@18.2.0))(@kitconcept/volto-dsgvo-banner@https://codeload.github.com/PROCERGS/volto-dsgvo-banner/tar.gz/5975bbd8f62427b264bc4c1debc12c089a96467e)(@kitconcept/volto-heading-block@2.4.0(react@18.2.0))(@kitconcept/volto-highlight-block@4.0.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@kitconcept/volto-introduction-block@1.0.0)(@kitconcept/volto-separator-block@4.1.2(react-dom@18.2.0(react@18.2.0))(react-intl@3.12.1(react@18.2.0))(react@18.2.0)(storybook@8.4.7(prettier@3.2.5)))(@kitconcept/volto-slider-block@6.3.1(@plone/volto@18.1.2(@babel/runtime@7.26.0)(@popperjs/core@2.11.8)(@types/react-dom@18.2.12)(@types/react@18.2.27)(react-with-direction@1.4.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(seamless-immutable@7.1.4))(embla-carousel@8.5.1)(react@18.2.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(storybook@8.4.7(prettier@3.2.5))
       '@kitconcept/volto-separator-block':
-        specifier: '*'
+        specifier: ^4.1.2
         version: 4.1.2(react-dom@18.2.0(react@18.2.0))(react-intl@3.12.1(react@18.2.0))(react@18.2.0)(storybook@8.4.7(prettier@3.2.5))
       '@kitconcept/volto-slider-block':
-        specifier: '*'
+        specifier: ^6.3.1
         version: 6.3.1(@plone/volto@18.1.2(@babel/runtime@7.26.0)(@popperjs/core@2.11.8)(@types/react-dom@18.2.12)(@types/react@18.2.27)(react-with-direction@1.4.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(seamless-immutable@7.1.4))(embla-carousel@8.5.1)(react@18.2.0)
       '@react-google-maps/api':
         specifier: '*'
@@ -2321,8 +2321,8 @@ packages:
   '@dual-bundle/import-meta-resolve@4.1.0':
     resolution: {integrity: sha512-+nxncfwHM5SgAtrVzgpzJOI1ol0PkumhVo469KCf9lUi21IGcY90G98VuHm9VRrUypmAzawAHO9bs6hqeADaVg==}
 
-  '@eeacms/volto-accordion-block@11.0.3':
-    resolution: {integrity: sha512-/L4lOtiqgl+vHpwuO0x8SVgNvEQR23iiiFjK20weK/YfIfEaFaX02ss6WFawsnUwF2gmX5yEKpMvUcpblDhz2w==}
+  '@eeacms/volto-accordion-block@10.4.6':
+    resolution: {integrity: sha512-IZfAg8By1dZA2SSr4MNu2gFCs0F67/ZMAlpdqkevSMvkBREjny97cEFtMjkhGyOc3MBTp1vd0TtqvL3cN1GehQ==}
 
   '@eeacms/volto-widget-theme-picker@2.0.0':
     resolution: {integrity: sha512-f3+B7ATw0EoehO2rqU9NZoJABBtFUGy+zDGynm7MCSsfWcy6yafmCsOw2MKssBFXkgBicfpLLdE8ESEEITy6aA==}
@@ -15262,7 +15262,7 @@ snapshots:
 
   '@dual-bundle/import-meta-resolve@4.1.0': {}
 
-  '@eeacms/volto-accordion-block@11.0.3':
+  '@eeacms/volto-accordion-block@10.4.6':
     dependencies:
       '@eeacms/volto-widget-theme-picker': 2.0.0
 
@@ -15931,9 +15931,9 @@ snapshots:
 
   '@kitconcept/volto-introduction-block@1.0.0': {}
 
-  ? '@kitconcept/volto-light-theme@5.0.2(@eeacms/volto-accordion-block@11.0.3)(@kitconcept/volto-button-block@3.0.3(classnames@2.2.6)(react-dom@18.2.0(react@18.2.0))(react-intl@3.12.1(react@18.2.0))(react@18.2.0))(@kitconcept/volto-dsgvo-banner@https://codeload.github.com/PROCERGS/volto-dsgvo-banner/tar.gz/5975bbd8f62427b264bc4c1debc12c089a96467e)(@kitconcept/volto-heading-block@2.4.0(react@18.2.0))(@kitconcept/volto-highlight-block@4.0.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@kitconcept/volto-introduction-block@1.0.0)(@kitconcept/volto-separator-block@4.1.2(react-dom@18.2.0(react@18.2.0))(react-intl@3.12.1(react@18.2.0))(react@18.2.0)(storybook@8.4.7(prettier@3.2.5)))(@kitconcept/volto-slider-block@6.3.1(@plone/volto@18.1.2(@babel/runtime@7.26.0)(@popperjs/core@2.11.8)(@types/react-dom@18.2.12)(@types/react@18.2.27)(react-with-direction@1.4.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(seamless-immutable@7.1.4))(embla-carousel@8.5.1)(react@18.2.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(storybook@8.4.7(prettier@3.2.5))'
+  ? '@kitconcept/volto-light-theme@5.0.2(@eeacms/volto-accordion-block@10.4.6)(@kitconcept/volto-button-block@3.0.3(classnames@2.2.6)(react-dom@18.2.0(react@18.2.0))(react-intl@3.12.1(react@18.2.0))(react@18.2.0))(@kitconcept/volto-dsgvo-banner@https://codeload.github.com/PROCERGS/volto-dsgvo-banner/tar.gz/5975bbd8f62427b264bc4c1debc12c089a96467e)(@kitconcept/volto-heading-block@2.4.0(react@18.2.0))(@kitconcept/volto-highlight-block@4.0.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@kitconcept/volto-introduction-block@1.0.0)(@kitconcept/volto-separator-block@4.1.2(react-dom@18.2.0(react@18.2.0))(react-intl@3.12.1(react@18.2.0))(react@18.2.0)(storybook@8.4.7(prettier@3.2.5)))(@kitconcept/volto-slider-block@6.3.1(@plone/volto@18.1.2(@babel/runtime@7.26.0)(@popperjs/core@2.11.8)(@types/react-dom@18.2.12)(@types/react@18.2.27)(react-with-direction@1.4.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(seamless-immutable@7.1.4))(embla-carousel@8.5.1)(react@18.2.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(storybook@8.4.7(prettier@3.2.5))'
   : dependencies:
-      '@eeacms/volto-accordion-block': 11.0.3
+      '@eeacms/volto-accordion-block': 10.4.6
       '@kitconcept/volto-button-block': 3.0.3(classnames@2.2.6)(react-dom@18.2.0(react@18.2.0))(react-intl@3.12.1(react@18.2.0))(react@18.2.0)
       '@kitconcept/volto-dsgvo-banner': https://codeload.github.com/PROCERGS/volto-dsgvo-banner/tar.gz/5975bbd8f62427b264bc4c1debc12c089a96467e
       '@kitconcept/volto-heading-block': 2.4.0(react@18.2.0)
@@ -30087,7 +30087,7 @@ snapshots:
       is-yarn-global: 0.4.1
       latest-version: 7.0.0
       pupa: 3.1.0
-      semver: 7.5.4
+      semver: 7.6.3
       semver-diff: 4.0.0
       xdg-basedir: 5.1.0
 
