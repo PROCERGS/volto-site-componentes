@@ -2,7 +2,6 @@ import ListaTelefones from './components/ListaTelefones/ListaTelefones';
 import GridWithImage from './components/Blocks/Listing/GridWithImage';
 
 //Locais
-import LocalView from './components/Views/Local';
 import LocaisBlockEdit from './components/Blocks/LocaisBlock/Edit';
 import LocaisBlockView from './components/Blocks/LocaisBlock/View';
 import locaisSVG from '@plone/volto/icons/home.svg';
@@ -15,12 +14,6 @@ import EnderecoNew from './components/LocalTeaser/EnderecoTemplate';
 
 const applyConfig = (config) => {
   config.widgets.widget.lista_telefones = ListaTelefones;
-
-  config.views.contentTypesViews = {
-    ...config.views.contentTypesViews,
-    Local: LocalView,
-  };
-
   //Bloco Locais
   config.blocks.blocksConfig.locaisBlock = {
     id: 'locaisBlock',
