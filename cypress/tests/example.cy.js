@@ -13,7 +13,9 @@ context('Example Acceptance Tests', () => {
 
     it('As editor I can add edit a Page', function () {
       cy.visit('/document');
+      cy.wait(2000);
       cy.navigate('/document/edit');
+      cy.wait(2000);
       cy.get('#toolbar-save').click();
     });
   });
