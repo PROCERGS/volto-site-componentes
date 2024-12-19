@@ -39,7 +39,7 @@
     "@codesyntax/volto-listingadvanced-variation": "*",
 
     "@fortawesome/react-fontawesome": "*",
-    "@fortawesome/free-solid-svg-icons": "*",
+    "@fortawesome/free-solid-svg-icons": "*"
   },
   "peerDependencies": {
     "react": "18.2.0",
