@@ -5,8 +5,6 @@ const addons = [
   "@kitconcept/volto-introduction-block",
   "@kitconcept/volto-separator-block",
   
-  "@kitconcept/volto-dsgvo-banner",
-
   'volto-sitedemo'
 ];
 const theme = '';

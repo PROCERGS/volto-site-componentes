@@ -40,8 +40,6 @@
 
     "@fortawesome/react-fontawesome": "*",
     "@fortawesome/free-solid-svg-icons": "*",
-
-    "@kitconcept/volto-dsgvo-banner": "git://github.com/PROCERGS/volto-dsgvo-banner.git"
   },
   "peerDependencies": {
     "react": "18.2.0",
