@@ -1,13 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PreviewLink from '../../PreviewLink/PreviewLink';
+import '../../../theme/components/GridWithImage.scss';
 
 const GridWithImage = ({ items = [] }) => {
+  console.log(items);
   return (
     <div className="grid-with-image">
-      <div className="grid">
+      <div className="grid-link">
         {items.map((item) => (
-          <Link to={item.url} key={item['@id']}>
+          <a
+            href={item.getRemoteUrl ? item.getRemoteUrl : `/${item.getId}`}
+            key={item['@id']}
+          >
             <div className="grid-item" key={item['@id']}>
               <div className="image">
                 <PreviewLink
@@ -22,7 +27,7 @@ const GridWithImage = ({ items = [] }) => {
                 <p>{item.description}</p>
               </div>
             </div>
-          </Link>
+          </a>
         ))}
       </div>
     </div>
