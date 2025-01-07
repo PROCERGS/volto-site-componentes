@@ -1,14 +1,12 @@
 .s-wrapper {
   display: flex;
   width: 385px;
-  min-height: 54px; // Ensure it fits the content with some extra space
   align-items: center;
   padding: 0 15px;
   border-radius: 8px;
   background-color: #f8f8f8;
   box-shadow: 0 0 8px #ddd;
   place-content: space-between;
-  z-index: 9999; // Ensure it appears over the rest of the items but below the hamburger button
 }
 
 #s-logo {
@@ -43,4 +41,20 @@
   .s-input {
     font-size: 20px;
   }
+}
+
+.header-wrapper .header .search-wrapper .search .search-bar {
+  position: unset !important;
+}
+
+body header.header-wrapper .header .mobile-nav .menu-drawer {
+  z-index: 1000;
+}
+
+.hamburger-wrapper {
+  z-index: 1001;
+}
+
+.search-button{
+  display: none;
 }
