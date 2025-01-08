@@ -75,15 +75,13 @@
   font-size: 14px;
 }
 
-@media (max-width: 768px) {
-  .grid {
-    grid-template-columns: 1fr;
+@media (max-width: 992px) {
+  .grid-link{
+    grid-template-columns: repeat(2, 1fr);
   }
 }
-
-@media (min-width: 769px) and (max-width: 1024px) {
-  .grid {
-    gap: 15px;
-    grid-template-columns: repeat(2, 1fr);
+@media (max-width: 768px) {
+  .grid-link{
+    grid-template-columns: repeat(1,1fr);
   }
 }
