@@ -24,8 +24,12 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
 
-      - name: Enable corepack
-        run: corepack enable
+      # Install pnpm directly, bypassing Corepack’s outdated TUF keys.
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          # You can pin a specific version or use a range like '8.x'
+          version: 8.x
 
       - name: Get pnpm store directory
         shell: bash
@@ -43,5 +47,5 @@ jobs:
       - name: Install dependencies
         run: make install
 
-      - name: test i18n command
+      - name: Test i18n command
         run: make i18n

@@ -26,8 +26,12 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
 
-      - name: Enable corepack
-        run: corepack enable
+      # Install pnpm directly, bypassing Node’s built-in Corepack
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          # You can pin a specific version or use a range, e.g., '8.x'
+          version: 8.x
 
       - name: Get pnpm store directory
         shell: bash
@@ -46,8 +50,7 @@ jobs:
         run: make install
 
       - name: Generate Storybook
-        run: |
-          make storybook-build
+        run: make storybook-build
 
       - name: Deploy to GitHub pages
         uses: JamesIves/github-pages-deploy-action@v4
