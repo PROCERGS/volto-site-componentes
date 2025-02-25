@@ -23,8 +23,17 @@ import { TOOLTIP } from "./editor/plugins/ToolTipPlugin/constants";
 import installTextsizePlugin from "./editor/plugins/TextSize/index";
 import { TEXTSIZE } from './editor/plugins/TextSize/constants';
 
+import installSlate from './editor';
+
 
 const applyConfig = (config) => {
+
+  config = [installSlate].reduce(
+    (acc, apply) => apply(acc),
+    config,
+  );
+
+
   config.widgets.widget.lista_telefones = ListaTelefones;
   //Bloco Locais
   config.blocks.blocksConfig.locaisBlock = {
@@ -81,29 +90,7 @@ const applyConfig = (config) => {
     ],
   };
 
-  config = installTooltipPlugin(config);
 
-  config.settings.slate.toolbarButtons = [
-    ...(config.settings.slate.toolbarButtons || []),
-    TOOLTIP,
-  ];
-
-  config.settings.slate.expandedToolbarButtons = [
-    ...(config.settings.slate.expandedToolbarButtons || []),
-    TOOLTIP,
-  ];
-
-  config = installTextsizePlugin(config);
-
-  config.settings.slate.toolbarButtons = [
-    ...(config.settings.slate.toolbarButtons || []),
-    TEXTSIZE,
-  ];
-
-  config.settings.slate.expandedToolbarButtons = [
-    ...(config.settings.slate.expandedToolbarButtons || []),
-    TEXTSIZE,
-  ];
 
   return config;
 };

@@ -17,7 +17,7 @@
       "volto-sitedemo/*": ["./src/*"]
     }
   },
-  "include": ["**/*.ts", "**/*.tsx"],
+  "include": ["**/*.ts", "**/*.tsx", "src/editor/config.jsx"],
   "exclude": [
     "node_modules",
     "build",
