@@ -7,10 +7,8 @@ const TextsizeElement = (props) => {
 
   console.log('TextsizeElement size:', data.textsize_size); // Debugging line
 
-  return React.createElement(
-    tag,
-    attributes,
-    children
+  return (
+    <small className={tag} {...attributes}>{children}</small>
   );
 };
 

@@ -13,7 +13,7 @@ export const TextsizeEditorSchema = {
     type: 'string',
     factory: 'Choice',
     choices: [
-      ['h3', 'Grande'],
+      ['grande', 'Grande'],
       ['small', 'Pequeno'],
     ],
     },
