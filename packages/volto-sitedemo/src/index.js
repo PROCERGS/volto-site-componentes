@@ -17,12 +17,6 @@ import "./theme/custom.less";
 import paintSVG from "@plone/volto/icons/paint.svg";
 import { Icon } from "@plone/volto/components";
 
-import installTooltipPlugin from "./editor/plugins/ToolTipPlugin/index";
-import { TOOLTIP } from "./editor/plugins/ToolTipPlugin/constants";
-
-import installTextsizePlugin from "./editor/plugins/TextSize/index";
-import { TEXTSIZE } from './editor/plugins/TextSize/constants';
-
 import installSlate from './editor';
 
 

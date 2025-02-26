@@ -3,6 +3,7 @@ import MarkElementButton from '@plone/volto-slate/editor/ui/MarkElementButton';
 import textsizeSVG from '@plone/volto/icons/format.svg';
 
 export default function applyConfig(config) {
+  
   config.settings.slate.elements = {
     ...config.settings.slate.elements,
     small: ({ children }) => <small>{children}</small>,
