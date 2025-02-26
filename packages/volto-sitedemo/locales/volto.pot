@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2024-12-06T21:28:19.909Z\n"
+"POT-Creation-Date: 2025-02-26T19:52:40.413Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -18,6 +18,16 @@ msgstr ""
 msgid "Cabeçalho"
 msgstr ""
 
+#. Default: "Edit textsize"
+#: editor/plugins/TextSize/index
+msgid "Edit textsize"
+msgstr ""
+
+#. Default: "Edit tooltip"
+#: editor/plugins/ToolTipPlugin/index
+msgid "Edit tooltip"
+msgstr ""
+
 #. Default: "Escolha um Local"
 #: components/LocalTeaser/EnderecoTemplate
 msgid "Escolha um Local"
@@ -28,7 +38,12 @@ msgstr ""
 msgid "Locais"
 msgstr ""
 
-#. Default: "Sitemap"
-#: components/SiteMapFooter/SiteMapFooter
-msgid "Sitemap"
+#. Default: "Remove textsize"
+#: editor/plugins/TextSize/index
+msgid "Remove textsize"
+msgstr ""
+
+#. Default: "Remove tooltip"
+#: editor/plugins/ToolTipPlugin/index
+msgid "Remove tooltip"
 msgstr ""

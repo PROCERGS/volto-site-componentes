@@ -13,20 +13,12 @@ import locais from './reducers/locais/locais';
 import EnderecoNew from './components/LocalTeaser/EnderecoTemplate';
 
 //gray and small text
-import "./theme/custom.less";
-import paintSVG from "@plone/volto/icons/paint.svg";
-import { Icon } from "@plone/volto/components";
+import './theme/custom.less';
 
 import installSlate from './editor';
 
-
 const applyConfig = (config) => {
-
-  config = [installSlate].reduce(
-    (acc, apply) => apply(acc),
-    config,
-  );
-
+  config = [installSlate].reduce((acc, apply) => apply(acc), config);
 
   config.widgets.widget.lista_telefones = ListaTelefones;
   //Bloco Locais
@@ -71,20 +63,6 @@ const applyConfig = (config) => {
       template: GridWithImage,
     },
   ];
-
-  // Configuração do bloco de texto
-  config.settings.slate.styleMenu = {
-    ...(config.settings.slate.styleMenu || {}),
-    blockStyles: [
-      {
-        cssClass: "gray",
-        label: "Gray",
-        icon: () => <Icon name={paintSVG} size="18px" />,
-      },
-    ],
-  };
-
-
 
   return config;
 };

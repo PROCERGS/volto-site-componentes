@@ -1,11 +1,9 @@
 import React from 'react';
 import MarkElementButton from '@plone/volto-slate/editor/ui/MarkElementButton';
-import calloutSVG from '@plone/volto/icons/megaphone.svg';
+import subtextSVG from '@plone/volto/icons/subtext.svg';
 
-export const SmallElement = ({ attributes, children }) => {
-  return (
-    <small {...attributes} style={{ display: 'inline' }}>{children}</small>
-  );
+export const SmallElement = ({ children }) => {
+  return <small>{children}</small>;
 };
 
 export default function install(config) {
@@ -13,13 +11,17 @@ export default function install(config) {
 
   slate.buttons['small'] = (props) => (
     <MarkElementButton
-      format="small"
-      icon={calloutSVG}
       title="Small"
+      format="small"
+      icon={subtextSVG}
       {...props}
     />
   );
-  slate.inlineElements['small'] = SmallElement;
+  slate.elements = {
+    ...config.settings.slate.elements,
+    small: ({ children }) => <small>{children}</small>,
+  };
+  slate.inlineElements = [...config.settings.slate.inlineElements, 'small'];
 
   slate.toolbarButtons.push('small');
   slate.expandedToolbarButtons.push('small');

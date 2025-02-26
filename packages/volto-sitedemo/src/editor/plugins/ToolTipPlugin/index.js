@@ -20,8 +20,11 @@ const messages = defineMessages({
 });
 
 export default function installTooltipPlugin(config) {
+  const { slate } = config.settings;
+  slate.toolbarButtons = [...(slate.toolbarButtons || []), TOOLTIP];
+
   const opts = {
-    title: 'Tooltip',
+    title: 'Text Tooltip',
     pluginId: TOOLTIP,
     elementType: TOOLTIP,
     element: TooltipElement,

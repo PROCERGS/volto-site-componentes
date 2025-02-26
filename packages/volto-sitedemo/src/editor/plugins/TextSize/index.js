@@ -20,6 +20,9 @@ const messages = defineMessages({
 });
 
 export default function installTextsizePlugin(config) {
+  const { slate } = config.settings;
+  slate.toolbarButtons = [...(slate.toolbarButtons || []), TEXTSIZE];
+
   const opts = {
     title: 'Textsize',
     pluginId: TEXTSIZE,

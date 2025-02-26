@@ -16,6 +16,16 @@ msgstr ""
 msgid "Cabeçalho"
 msgstr ""
 
+#. Default: "Edit textsize"
+#: editor/plugins/TextSize/index
+msgid "Edit textsize"
+msgstr "VACA AMARELA"
+
+#. Default: "Edit tooltip"
+#: editor/plugins/ToolTipPlugin/index
+msgid "Edit tooltip"
+msgstr "VACA MARROM"
+
 #. Default: "Escolha um Local"
 #: components/LocalTeaser/EnderecoTemplate
 msgid "Escolha um Local"
@@ -26,7 +36,12 @@ msgstr ""
 msgid "Locais"
 msgstr ""
 
-#. Default: "Sitemap"
-#: components/SiteMapFooter/SiteMapFooter
-msgid "Sitemap"
+#. Default: "Remove textsize"
+#: editor/plugins/TextSize/index
+msgid "Remove textsize"
+msgstr ""
+
+#. Default: "Remove tooltip"
+#: editor/plugins/ToolTipPlugin/index
+msgid "Remove tooltip"
 msgstr ""
