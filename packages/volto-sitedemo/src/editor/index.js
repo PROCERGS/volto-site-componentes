@@ -33,6 +33,6 @@ export default function applyConfig(config) {
     'small',
   ];
 
-  //config = installDefaultPlugins(config);
+  config = installDefaultPlugins(config);
   return config;
 }

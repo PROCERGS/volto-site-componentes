@@ -4,7 +4,7 @@ import installSmallTextPlugin from './SmallText';
 export default function install(config) {
   return [
     installTooltipPlugin,
-    installSmallTextPlugin,
+    //installSmallTextPlugin,
     
   ].reduce((acc, apply) => apply(acc), config);
 }
