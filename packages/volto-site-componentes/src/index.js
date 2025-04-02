@@ -2,6 +2,8 @@ import ListaTelefones from './components/ListaTelefones/ListaTelefones';
 import GridWithImage from './components/Blocks/Listing/GridWithImage';
 import GridServicos from './components/Blocks/Listing/GridServicos';
 
+import schemaEnhancer from './components/Blocks/Listing/SchemaEnhancer/schemaEnhancer';
+
 //Locais
 import LocaisBlockEdit from './components/Blocks/LocaisBlock/Edit';
 import LocaisBlockView from './components/Blocks/LocaisBlock/View';
@@ -86,6 +88,7 @@ const applyConfig = (config) => {
       id: 'grid-servicos',
       title: 'Grid Servicos',
       template: GridServicos,
+      schemaEnhancer: schemaEnhancer,
     },
   ];
 
