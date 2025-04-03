@@ -1,8 +1,10 @@
 import ListaTelefones from './components/ListaTelefones/ListaTelefones';
-import GridWithImage from './components/Blocks/Listing/GridWithImage';
-import GridServicos from './components/Blocks/Listing/GridServicos';
+import GridWithImage from './components/Blocks/Listing/GridWithImage/GridWithImage';
+import GridServicos from './components/Blocks/Listing/GridServicos/GridServicos';
+import GridProg from './components/Blocks/Listing/GridProg/GridProg';
 
-import schemaEnhancer from './components/Blocks/Listing/SchemaEnhancer/schemaEnhancer';
+import schemaEnhancerProg from './components/Blocks/Listing/GridProg/schemaEnhancer';
+import schemaEnhancerServicos from './components/Blocks/Listing/GridServicos/schemaEnhancer';
 
 //Locais
 import LocaisBlockEdit from './components/Blocks/LocaisBlock/Edit';
@@ -88,7 +90,17 @@ const applyConfig = (config) => {
       id: 'grid-servicos',
       title: 'Grid Servicos',
       template: GridServicos,
-      schemaEnhancer: schemaEnhancer,
+      schemaEnhancer: schemaEnhancerServicos,
+    },
+  ];
+
+  config.blocks.blocksConfig.listing.variations = [
+    ...(config.blocks.blocksConfig.listing.variations || []),
+    {
+      id: 'grid-programas',
+      title: 'Grid Programas e Projetos',
+      template: GridProg,
+      schemaEnhancer: schemaEnhancerProg,
     },
   ];
 
