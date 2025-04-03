@@ -1,5 +1,5 @@
 import React from 'react';
-import PreviewLink from '../../PreviewLink/PreviewLink';
+import PreviewLink from '../../../PreviewLink/PreviewLink';
 
 const GridWithImage = ({ items = [] }) => {
   return (
