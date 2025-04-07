@@ -90,7 +90,7 @@ const applyConfig = (config) => {
       id: 'grid-servicos',
       title: 'Grid Servicos',
       template: GridServicos,
-      schemaEnhancer: schemaEnhancerServicos,
+      //schemaEnhancer: schemaEnhancerServicos,
     },
   ];
 
@@ -100,7 +100,7 @@ const applyConfig = (config) => {
       id: 'grid-programas',
       title: 'Grid Programas e Projetos',
       template: GridProg,
-      schemaEnhancer: schemaEnhancerProg,
+      //schemaEnhancer: schemaEnhancerProg,
     },
   ];
 

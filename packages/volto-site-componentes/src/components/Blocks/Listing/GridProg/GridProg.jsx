@@ -18,13 +18,7 @@ const GridProg = ({ items = [] }) => {
           >
             <div className="prog-grid-item" key={item['@id']}>
               <div className="prog-content">
-                <h3
-                  style={{
-                    overflow: 'hidden',
-                    textOverflow: 'ellipsis',
-                    whiteSpace: 'nowrap',
-                  }}
-                >
+                <h3>
                   {item.title}
                 </h3>
               </div>
