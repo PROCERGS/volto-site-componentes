@@ -1,0 +1,26 @@
+.banners-row {
+  display: flex;
+  gap: 3rem; /* or clamp(1rem, 5vw, 200px) for responsiveness */
+  max-width: var(--narrow-container-width);
+}
+
+@media (max-width: 600px) {
+  .banners-row {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+.banner-column {
+  flex: 1;
+}
+
+.banner-column img {
+  width: 100%;
+  height: auto;
+}
+
+.banners-row .banner-column a.external:after {
+  content: none !important;
+  display: none !important;
+}

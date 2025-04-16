@@ -18,6 +18,11 @@ import locais from './reducers/locais/locais';
 
 import EnderecoNew from './components/LocalTeaser/EnderecoTemplate';
 
+import BannerBlockView from './components/Blocks/Banner/View';
+import BannerBlockEdit from './components/Blocks/Banner/Edit';
+import bannerSVG from '@plone/volto/icons/home.svg';
+
+
 //gray and small text
 import './theme/custom.less';
 
@@ -88,6 +93,26 @@ const applyConfig = (config) => {
       template: GridServicos,
     },
   ];
+
+  config.blocks.blocksConfig.listing.variations = [
+    ...(config.blocks.blocksConfig.listing.variations || []),
+    {
+      id: 'grid-servicos',
+      title: 'Grid Servicos',
+      template: GridServicos,
+    },
+  ];
+
+    config.blocks.blocksConfig.banner = {
+      id: 'banner',
+      title: 'Banner',
+      group: 'procergs',
+      icon: bannerSVG,
+      edit: BannerBlockEdit,
+      view: BannerBlockView,
+      sidebarTab: 1,
+    };
+
 
   return config;
 };
