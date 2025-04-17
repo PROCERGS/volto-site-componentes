@@ -27,26 +27,25 @@ const bannerSchema = ({ intl }) => ({
   }],
   properties: {
     banner1: {
-      title: intl.formatMessage(messages.banner2),
+      title: intl.formatMessage(messages.banner1),
       widget: 'object_browser',
       mode: 'link',
       allowExternals: false,
+      selectableTypes: ['Banner'],
     },
     banner2: {
       title: intl.formatMessage(messages.banner2),
       widget: 'object_browser',
       mode: 'link',
       allowExternals: false,
-      pattern_options: {
-        maximumSelectionSize: 10,
-        selectableTypes: ['News Item', 'Event'],
-      },
+      selectableTypes: ['Banner'],
     },
     banner3: {
-      title: intl.formatMessage(messages.banner2),
+      title: intl.formatMessage(messages.banner3),
       widget: 'object_browser',
       mode: 'link',
-      selectedItemAttrs: ['url'],
+      allowExternals: false,
+      selectableTypes: ['Banner'],
     },
   },
   required: [],
