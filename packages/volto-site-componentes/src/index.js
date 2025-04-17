@@ -22,7 +22,6 @@ import BannerBlockView from './components/Blocks/Banner/View';
 import BannerBlockEdit from './components/Blocks/Banner/Edit';
 import bannerSVG from '@plone/volto/icons/home.svg';
 
-
 //gray and small text
 import './theme/custom.less';
 
@@ -103,16 +102,15 @@ const applyConfig = (config) => {
     },
   ];
 
-    config.blocks.blocksConfig.banner = {
-      id: 'banner',
-      title: 'Banner',
-      group: 'procergs',
-      icon: bannerSVG,
-      edit: BannerBlockEdit,
-      view: BannerBlockView,
-      sidebarTab: 1,
-    };
-
+  config.blocks.blocksConfig.banner = {
+    id: 'banner',
+    title: 'Banner',
+    group: 'procergs',
+    icon: bannerSVG,
+    edit: BannerBlockEdit,
+    view: BannerBlockView,
+    sidebarTab: 1,
+  };
 
   return config;
 };

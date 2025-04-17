@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2025-03-26T20:33:39.332Z\n"
+"POT-Creation-Date: 2025-04-17T15:29:03.787Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -12,6 +12,11 @@ msgstr ""
 "Language-Name: English\n"
 "Preferred-Encodings: utf-8\n"
 "Domain: volto\n"
+
+#. Default: "Banner Type"
+#: components/Blocks/Banner/schema
+msgid "Banner Type"
+msgstr ""
 
 #. Default: "Cabeçalho"
 #: components/Blocks/LocaisBlock/schema
@@ -68,6 +73,11 @@ msgstr ""
 msgid "Exibe uma imagem com descrição em bloco"
 msgstr ""
 
+#. Default: "Banner #1"
+#: components/Blocks/Banner/schema
+msgid "First Image"
+msgstr ""
+
 #. Default: "Imagem"
 #: components/Blocks/ImagemTexto/schema
 msgid "Imagem"
@@ -106,6 +116,16 @@ msgstr ""
 #. Default: "Remove tooltip"
 #: editor/plugins/ToolTipPlugin/index
 msgid "Remove tooltip"
+msgstr ""
+
+#. Default: "Banner #2"
+#: components/Blocks/Banner/schema
+msgid "Second Image"
+msgstr ""
+
+#. Default: "Banner #3"
+#: components/Blocks/Banner/schema
+msgid "Third Image"
 msgstr ""
 
 #. Default: "Transparente"

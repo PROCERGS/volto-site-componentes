@@ -16,6 +16,11 @@ msgstr ""
 "Preferred-Encodings: utf-8\n"
 "Domain: volto\n"
 
+#. Default: "Banner Type"
+#: components/Blocks/Banner/schema
+msgid "Banner Type"
+msgstr ""
+
 #. Default: "Cabeçalho"
 #: components/Blocks/LocaisBlock/schema
 msgid "Cabeçalho"
@@ -71,6 +76,11 @@ msgstr ""
 msgid "Exibe uma imagem com descrição em bloco"
 msgstr ""
 
+#. Default: "Banner #1"
+#: components/Blocks/Banner/schema
+msgid "First Image"
+msgstr ""
+
 #. Default: "Imagem"
 #: components/Blocks/ImagemTexto/schema
 msgid "Imagem"
@@ -109,6 +119,16 @@ msgstr ""
 #. Default: "Remove tooltip"
 #: editor/plugins/ToolTipPlugin/index
 msgid "Remove tooltip"
+msgstr ""
+
+#. Default: "Banner #2"
+#: components/Blocks/Banner/schema
+msgid "Second Image"
+msgstr ""
+
+#. Default: "Banner #3"
+#: components/Blocks/Banner/schema
+msgid "Third Image"
 msgstr ""
 
 #. Default: "Transparente"

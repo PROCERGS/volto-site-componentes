@@ -1,5 +1,4 @@
 import React from 'react';
-import { flattenToAppURL } from '@plone/volto/helpers';
 import { UniversalLink, Image } from '@plone/volto/components';
 import './Banners.scss';
 

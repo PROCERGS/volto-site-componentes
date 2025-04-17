@@ -18,6 +18,11 @@ msgstr ""
 "X-Is-Fallback-For: es-ar es-bo es-cl es-co es-cr es-do es-ec es-es es-sv es-gt es-hn es-mx es-ni es-pa es-py es-pe es-pr es-us es-uy es-ve\n"
 "X-Generator: Poedit 2.2.1\n"
 
+#. Default: "Banner Type"
+#: components/Blocks/Banner/schema
+msgid "Banner Type"
+msgstr ""
+
 #. Default: "Cabeçalho"
 #: components/Blocks/LocaisBlock/schema
 msgid "Cabeçalho"
@@ -73,6 +78,11 @@ msgstr ""
 msgid "Exibe uma imagem com descrição em bloco"
 msgstr ""
 
+#. Default: "Banner #1"
+#: components/Blocks/Banner/schema
+msgid "First Image"
+msgstr ""
+
 #. Default: "Imagem"
 #: components/Blocks/ImagemTexto/schema
 msgid "Imagem"
@@ -111,6 +121,16 @@ msgstr ""
 #. Default: "Remove tooltip"
 #: editor/plugins/ToolTipPlugin/index
 msgid "Remove tooltip"
+msgstr ""
+
+#. Default: "Banner #2"
+#: components/Blocks/Banner/schema
+msgid "Second Image"
+msgstr ""
+
+#. Default: "Banner #3"
+#: components/Blocks/Banner/schema
+msgid "Third Image"
 msgstr ""
 
 #. Default: "Transparente"

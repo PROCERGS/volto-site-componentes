@@ -7,12 +7,11 @@ import bannerSchema from './schema';
 
 //import { useIntl } from 'react-intl';
 
-
 const BannerBlockEdit = (props) => {
   const { data, onChangeBlock, selected } = props;
   //const intl = useIntl();
   const schema = bannerSchema({ ...props });
-  
+
   return (
     <>
       <BannerBlockView {...props} isEditMode />

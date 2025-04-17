@@ -20,11 +20,13 @@ const messages = defineMessages({
 });
 
 const bannerSchema = ({ intl }) => ({
-  fieldsets: [{
-    id: 'default',
-    title: 'Default',
-    fields: ['banner1', 'banner2', 'banner3'],
-  }],
+  fieldsets: [
+    {
+      id: 'default',
+      title: 'Default',
+      fields: ['banner1', 'banner2', 'banner3'],
+    },
+  ],
   properties: {
     banner1: {
       title: intl.formatMessage(messages.banner1),
@@ -52,4 +54,3 @@ const bannerSchema = ({ intl }) => ({
 });
 
 export default bannerSchema;
-
