@@ -1,8 +1,6 @@
 name: Code analysis checks
 on:
   push:
-    branches:
-      - '**'
     paths:
       - "*.js"
       - "*.json"

@@ -1,8 +1,6 @@
 name: Storybook
 on:
   push:
-    branches:
-      - '**'
     paths:
       - "*.js"
       - "*.json"
