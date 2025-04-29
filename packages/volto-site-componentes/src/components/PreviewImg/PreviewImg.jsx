@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 import config from '@plone/volto/registry';
 
-import iconeDefault from './placeholder.png';
+import iconeDefault from './img.svg';
 
 /**
  * Renders a preview image for a catalog brain result item.
