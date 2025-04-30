@@ -2,10 +2,8 @@
 
 .prog-grid {
   display: flex;
-  max-width: var(--default-container-width);
   flex-direction: column;
   align-items: center;
-  padding: 10px;
   margin: 20px auto;
 }
 
