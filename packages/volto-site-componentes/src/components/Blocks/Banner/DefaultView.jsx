@@ -20,10 +20,12 @@ const BannerBlockDefaultView = (props) => {
   );
 
   return (
-    <div className={'block banners banners-row'}>
-      {banner1 && banner1[0] && renderImage(banner1[0])}
-      {banner2 && banner2[0] && renderImage(banner2[0])}
-      {banner3 && banner3[0] && renderImage(banner3[0])}
+    <div className={'block banners'}>
+      <div className={'banners-row'}>
+        {banner1 && banner1[0] && renderImage(banner1[0])}
+        {banner2 && banner2[0] && renderImage(banner2[0])}
+        {banner3 && banner3[0] && renderImage(banner3[0])}
+      </div>
     </div>
   );
 };

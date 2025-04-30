@@ -30,7 +30,9 @@
     "@react-google-maps/api": "*",
     
     "@codesyntax/volto-listingadvanced-variation": "*",
+    "@kitconcept/volto-carousel-block": "*",
     "@eeacms/volto-block-image-cards": "*",
+    "@eeacms/volto-accordion-block": "*",
 
     "@fortawesome/react-fontawesome": "*",
     "@fortawesome/free-solid-svg-icons": "*"

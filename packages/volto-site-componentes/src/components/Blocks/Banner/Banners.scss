@@ -1,13 +1,19 @@
-.banners-row {
-  display: flex;
-  max-width: var(--narrow-container-width);
+.block.banners {
+  max-width: var(--layout-container-width);
   margin-right: auto;
   margin-left: auto;
-  gap: clamp(1rem, 5vw, 200px);
+}
+
+.banners-row {
+  max-width: var(--default-container-width);
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+  gap: clamp(1rem, 1vw, 3rem);
 }
 
 @media (max-width: 600px) {
-  .banners-row {
+  .block.banners .banners-row {
     flex-direction: column;
     gap: 1rem;
   }
@@ -22,7 +28,7 @@
   height: auto;
 }
 
-.banners-row .banner-column a.external:after {
+.block.banners .banners-row .banner-column a.external:after {
   display: none !important;
   content: none !important;
 }
