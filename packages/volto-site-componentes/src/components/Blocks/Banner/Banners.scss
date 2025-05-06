@@ -5,8 +5,8 @@
 }
 
 .banners-row {
-  max-width: var(--default-container-width);
   display: flex;
+  max-width: var(--default-container-width);
   margin-right: auto;
   margin-left: auto;
   gap: clamp(1rem, 1vw, 3rem);
