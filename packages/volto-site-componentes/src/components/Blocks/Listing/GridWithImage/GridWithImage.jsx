@@ -27,8 +27,8 @@ const GridWithImage = ({ items = [] }) => {
                 />
               </div>
               <div className="custom-content">
+                <h5>{item.Subject?.[0]}</h5>
                 <h3>{item.title}</h3>
-                <p>{item.description}</p>
               </div>
             </div>
           </a>
