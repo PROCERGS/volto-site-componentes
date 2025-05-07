@@ -8,7 +8,7 @@
 .slick-dots {
   position: absolute;
   z-index: 10;
-  bottom: 40px;
+  bottom: 55px;
 }
 
 .block.carousel {
@@ -47,11 +47,45 @@
 }
 
 .grid-teaser-item > a > h3 {
-  display: none;
+  position: absolute;
+  top: 42%;
+  max-width: var(--layout-container-width);
+  height: 20%;
+  align-content: end;
+  padding: 0 1.75%;
+  color: white;
+  font-size: 35px;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.grid-image-wrapper::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  content: '';
+  pointer-events: none;
 }
 
 .grid-teaser-item > a > p {
-  display: none;
+  position: absolute;
+  top: 75%;
+  display: -webkit-box;
+  overflow: hidden;
+  max-width: var(--layout-container-width);
+  max-height: 11%;
+  padding: 0 1.75%;
+  -webkit-box-orient: vertical;
+  color: white;
+  font-size: 24px;
+  -webkit-line-clamp: 2;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+  word-wrap: break-word;
 }
 
 .block.carousel .slick-prev::before {
@@ -76,16 +110,20 @@
   position: absolute;
   z-index: 10;
   top: 50%;
-  left: 40px;
+  left: 20px;
   color: white;
   transform: translateY(-50%);
+}
+
+.block.carousel .grid-image-wrapper {
+  padding-top: 45% !important;
 }
 
 .block.carousel .slick-next {
   position: absolute;
   z-index: 10;
   top: 50%;
-  right: 40px;
+  right: 20px;
   color: white;
   transform: translateY(-50%);
 }
