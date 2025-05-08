@@ -1,4 +1,5 @@
 const addons = [
+  '@kitconcept/volto-carousel-block',
   'volto-site-componentes'
 ];
 

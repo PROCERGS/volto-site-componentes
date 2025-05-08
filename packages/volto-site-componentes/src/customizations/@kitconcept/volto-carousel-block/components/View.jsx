@@ -1,5 +1,5 @@
 import React, { useEffect, useCallback, useState } from 'react';
-import { Container, Message } from 'semantic-ui-react';
+import { Message } from 'semantic-ui-react';
 import Slider from 'react-slick';
 import teaserHeroTopTemplate from '@kitconcept/volto-carousel-block/icons/teaser-template.svg';
 import { defineMessages, useIntl } from 'react-intl';
