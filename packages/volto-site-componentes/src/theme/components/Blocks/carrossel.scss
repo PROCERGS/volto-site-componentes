@@ -48,13 +48,14 @@
 
 .grid-teaser-item > a > h3 {
   position: absolute;
-  top: 42%;
+  top: 40%;
   max-width: var(--layout-container-width);
   height: 20%;
   align-content: end;
   padding: 0 1.75%;
   color: white;
-  font-size: 35px;
+  font-size: 2vw;
+  line-height: 120%;
   overflow-wrap: break-word;
   white-space: pre-wrap;
   word-wrap: break-word;
@@ -73,7 +74,9 @@
 
 .grid-teaser-item > a > p {
   position: absolute;
-  top: 75%;
+  top: 73%;
+
+  /* Limitar texto a duas linhas */
   display: -webkit-box;
   overflow: hidden;
   max-width: var(--layout-container-width);
@@ -81,11 +84,10 @@
   padding: 0 1.75%;
   -webkit-box-orient: vertical;
   color: white;
-  font-size: 24px;
-  -webkit-line-clamp: 2;
-  overflow-wrap: break-word;
-  white-space: pre-wrap;
-  word-wrap: break-word;
+  font-size: 1.35vw;
+  -webkit-line-clamp: 2; /* Limita a 2 linhas */
+  line-height: 120%;
+  text-overflow: ellipsis;
 }
 
 .block.carousel .slick-prev::before {
@@ -116,7 +118,58 @@
 }
 
 .block.carousel .grid-image-wrapper {
-  padding-top: 45% !important;
+  padding-top: 35% !important;
+}
+
+@media (max-width: 1200px) {
+  .grid-image-wrapper::after {
+    height: 100%;
+  }
+  .block.carousel .grid-image-wrapper {
+    padding-top: 40% !important; // Ajuste para telas menores que 480px
+  }
+  .grid-teaser-item > a > h3 {
+    top: 0%;
+    font-size: 4vw;
+  }
+  .grid-teaser-item > a > p {
+    top: 65%;
+    font-size: 1.75vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-image-wrapper::after {
+    height: 100%;
+  }
+  .block.carousel .grid-image-wrapper {
+    padding-top: 60% !important; // Ajuste para telas menores que 480px
+  }
+  .grid-teaser-item > a > h3 {
+    top: 0%;
+    font-size: 5vw;
+  }
+  .grid-teaser-item > a > p {
+    top: 65%;
+    font-size: 2vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-image-wrapper::after {
+    height: 100%;
+  }
+  .block.carousel .grid-image-wrapper {
+    padding-top: 140% !important; // Ajuste para telas menores que 480px
+  }
+  .grid-teaser-item > a > h3 {
+    top: 0%;
+    font-size: 6vw;
+  }
+  .grid-teaser-item > a > p {
+    top: 65%;
+    font-size: 4vw;
+  }
 }
 
 .block.carousel .slick-next {
