@@ -56,3 +56,7 @@ html {
     sans-serif;
   text-decoration: underline;
 }
+
+.ui.drag.block.inner.listing > * > div {
+  pointer-events: none;
+}
