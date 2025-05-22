@@ -29,15 +29,14 @@
   "dependencies": {
     "react-slick": "0.25.2",
 
-    "@react-google-maps/api": "*",
+    "@react-google-maps/api": "2.20.6",
     
-    "@codesyntax/volto-listingadvanced-variation": "*",
-    "@kitconcept/volto-carousel-block": "*",
-    "@eeacms/volto-block-image-cards": "*",
-    "@eeacms/volto-accordion-block": "*",
+    "@kitconcept/volto-carousel-block": "1.1.0",
+    "@eeacms/volto-block-image-cards": "2.0.2",
+    "@eeacms/volto-accordion-block": "11.0.4",
 
-    "@fortawesome/react-fontawesome": "*",
-    "@fortawesome/free-solid-svg-icons": "*",
+    "@fortawesome/react-fontawesome": "0.2.2",
+    "@fortawesome/free-solid-svg-icons": "6.7.2",
     
     "volto-form-block": "3.7.2"
 
