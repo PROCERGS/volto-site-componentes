@@ -8,7 +8,7 @@
 
 .banners-row {
   display: flex;
-  max-width: var(--default-container-width);
+  max-width: max-content;
   margin-right: auto;
   margin-left: auto;
   gap: clamp(1rem, 1vw, 3rem);
@@ -27,7 +27,7 @@
 
 .banner-column img {
   width: 100%;
-  height: auto;
+  max-height: 370px;
 }
 
 .block.banners .banners-row .banner-column a.external:after {
