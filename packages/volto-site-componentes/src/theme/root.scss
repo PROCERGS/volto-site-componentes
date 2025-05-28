@@ -57,6 +57,6 @@ html {
   text-decoration: underline;
 }
 
-.ui.drag.block.inner > * > div {
+.ui.drag.block.inner > * > :not(.text-slate-editor-inner) {
   pointer-events: none;
 }
