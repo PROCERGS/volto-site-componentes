@@ -56,7 +56,3 @@ html {
     sans-serif;
   text-decoration: underline;
 }
-
-.ui.drag.block.inner > * > :not(.text-slate-editor-inner) {
-  pointer-events: none;
-}
