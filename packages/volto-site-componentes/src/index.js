@@ -22,6 +22,7 @@ import MenuLateralBlockView from './components/Blocks/MenuLateral/View';
 //reducers
 import defaultReducers from '@plone/volto/reducers';
 import locais from './reducers/locais/locais';
+import ultimas from './reducers/ultimasNoticias/ultimas';
 
 import EnderecoNew from './components/LocalTeaser/EnderecoTemplate';
 
@@ -30,6 +31,10 @@ import BannerBlockEdit from './components/Blocks/Banner/Edit';
 import bannerSVG from '@plone/volto/icons/home.svg';
 
 import CpfWidget from './components/Widgets/FormWidgets/CpfWidget';
+
+//ultimas noticias
+import UltimasNoticiasEdit from './components/Blocks/UltimasNoticias/Edit';
+import UltimasNoticiasView from './components/Blocks/UltimasNoticias/View';
 
 //gray and small text
 
@@ -60,6 +65,16 @@ const applyConfig = (config) => {
     sidebarTab: 1,
   };
 
+  config.blocks.blocksConfig.ultimasNoticiasBlock = {
+    id: 'ultimasNoticiasBlock',
+    title: 'Últimas Notícias',
+    group: 'procergs',
+    icon: imageTextoSVG,
+    edit: UltimasNoticiasEdit,
+    view: UltimasNoticiasView,
+    sidebarTab: 1,
+  };
+
   config.blocks.blocksConfig.menuLateralBlock = {
     id: 'menuLateralBlock',
     title: 'Menu Lateral',
@@ -80,7 +95,9 @@ const applyConfig = (config) => {
   const localReducers = {
     ...defaultReducers,
     locais,
+    ultimas,
   };
+
   config.addonReducers = { ...config.addonReducers, ...localReducers };
 
   config.blocks.blocksConfig.teaser.variations = [

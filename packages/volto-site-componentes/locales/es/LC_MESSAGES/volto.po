@@ -28,6 +28,16 @@ msgstr ""
 msgid "Cabeçalho"
 msgstr ""
 
+#. Default: "Caminho"
+#: components/Blocks/MenuLateral/schema
+msgid "Caminho"
+msgstr ""
+
+#. Default: "Caminho para buscar os itens do menu lateral"
+#: components/Blocks/MenuLateral/schema
+msgid "Caminho Descrição"
+msgstr ""
+
 #. Default: "Cinza"
 #: components/Blocks/ImagemTexto/schema
 msgid "Cinza"
@@ -46,6 +56,11 @@ msgstr ""
 #. Default: "Descrição da imagem a ser exibida"
 #: components/Blocks/ImagemTexto/schema
 msgid "Descrição da imagem a ser exibida"
+msgstr ""
+
+#. Default: "Destaque"
+#: components/Blocks/UltimasNoticias/schema
+msgid "Destaque"
 msgstr ""
 
 #. Default: "Direita"
@@ -100,7 +115,38 @@ msgstr ""
 
 #. Default: "Locais"
 #: components/Blocks/LocaisBlock/schema
+#: components/Blocks/UltimasNoticias/schema
 msgid "Locais"
+msgstr ""
+
+#. Default: "Manchete"
+#: components/Blocks/UltimasNoticias/schema
+msgid "Manchete"
+msgstr ""
+
+#. Default: "Menu Lateral"
+#: components/Blocks/MenuLateral/schema
+msgid "Menu Lateral"
+msgstr ""
+
+#. Default: "Título do menu lateral"
+#: components/Blocks/MenuLateral/schema
+msgid "Menu Lateral Descrição"
+msgstr ""
+
+#. Default: "Opções"
+#: components/Blocks/UltimasNoticias/schema
+msgid "Opções"
+msgstr ""
+
+#. Default: "Opções"
+#: components/Blocks/UltimasNoticias/schema
+msgid "Opções-title"
+msgstr ""
+
+#. Default: "Padrão"
+#: components/Blocks/UltimasNoticias/schema
+msgid "Padrao"
 msgstr ""
 
 #. Default: "Posição"
@@ -136,4 +182,14 @@ msgstr ""
 #. Default: "Transparente"
 #: components/Blocks/ImagemTexto/schema
 msgid "Transparente"
+msgstr ""
+
+#. Default: "Título"
+#: components/Blocks/MenuLateral/schema
+msgid "Título"
+msgstr ""
+
+#. Default: "Título a ser descrito no menu lateral"
+#: components/Blocks/MenuLateral/schema
+msgid "Título Descrição"
 msgstr ""
