@@ -1,7 +1,9 @@
 import { LIST_ULTIMAS } from '../../constants/ActionTypes';
 
 export function listUltimas(endpoint) {
-  endpoint === 'Padrao' ? (endpoint = '') : (endpoint = endpoint);
+  if (endpoint === 'Padrao') {
+    endpoint = '';
+  }
   return {
     type: LIST_ULTIMAS,
     request: {

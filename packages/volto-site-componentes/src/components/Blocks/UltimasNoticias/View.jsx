@@ -8,15 +8,10 @@ const UltimasBlock = (props) => {
   const { data, isEditMode } = props;
   const dispatch = useDispatch();
   const items = useSelector((state) => state.ultimas?.data);
-  // Dispara chamada na criação da constante dispatch
-
-  console.log('UltimasBlock props:', data);
 
   useEffect(() => {
     dispatch(listUltimas(data?.options));
-  }, [dispatch]);
-
-  console.log('UltimasBlock items:', items);
+  }, [dispatch, data?.options]);
 
   return (
     <UltimasNoticiasView {...data} isEditMode={isEditMode} items={items} />
