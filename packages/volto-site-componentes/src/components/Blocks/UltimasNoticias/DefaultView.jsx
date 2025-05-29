@@ -1,6 +1,5 @@
 import React from 'react';
 import PreviewLink from '../../PreviewLink/PreviewLink';
-import { flattenToAppURL } from '@plone/volto/helpers';
 import { ConditionalLink } from '@plone/volto/components';
 import './Noticias.css';
 
@@ -9,8 +8,12 @@ const UltimasNoticias = ({ items = [], isEditMode }) => {
     <div className="custom-grid-with-image">
       <div className="custom-grid-link">
         {items.map((item) => (
-          <ConditionalLink item={item} condition={!isEditMode}>
-            <div className="custom-grid-item" key={item['@id']}>
+          <ConditionalLink
+            key={item['@id']}
+            item={item}
+            condition={!isEditMode}
+          >
+            <div className="custom-grid-item">
               <div className="custom-image">
                 <PreviewLink
                   item={item}
