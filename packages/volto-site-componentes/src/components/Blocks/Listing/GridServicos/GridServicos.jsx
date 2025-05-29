@@ -1,21 +1,17 @@
 import React from 'react';
 import PreviewLink from '../../../PreviewLink/PreviewLink';
 import './GridServicos.css';
+import { ConditionalLink } from '@plone/volto/components';
 
-const GridServicos = ({ items = [] }) => {
+const GridServicos = ({ items = [], isEditMode }) => {
   return (
     <div className="servicos-grid">
       <div className="servicos-grid-link">
         {items.map((item) => (
-          <a
-            href={
-              item['@type'] === 'Link'
-                ? item.getRemoteUrl
-                : item.getURL
-                  ? item.getURL
-                  : item['url']
-            }
+          <ConditionalLink
             key={item['@id']}
+            item={item}
+            condition={!isEditMode}
           >
             <div className="servicos-grid-item" key={item['@id']}>
               <div className="servicos-content">
@@ -34,7 +30,7 @@ const GridServicos = ({ items = [] }) => {
                 <p>{item.description}</p>
               </div>
             </div>
-          </a>
+          </ConditionalLink>
         ))}
       </div>
     </div>

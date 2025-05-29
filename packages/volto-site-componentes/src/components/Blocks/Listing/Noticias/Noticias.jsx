@@ -1,21 +1,17 @@
 import React from 'react';
 import PreviewLink from '../../../PreviewLink/PreviewLink';
 import './Noticias.css';
+import { ConditionalLink } from '@plone/volto/components';
 
-const GridWithImage = ({ items = [] }) => {
+const GridWithImage = ({ items = [], isEditMode }) => {
   return (
     <div className="custom-grid-with-image">
       <div className="custom-grid-link">
         {items.map((item) => (
-          <a
-            href={
-              item['@type'] === 'Link'
-                ? item.getRemoteUrl
-                : item.getURL
-                  ? item.getURL
-                  : item['url']
-            }
+          <ConditionalLink
             key={item['@id']}
+            item={item}
+            condition={!isEditMode}
           >
             <div className="custom-grid-item" key={item['@id']}>
               <div className="custom-image">
@@ -31,7 +27,7 @@ const GridWithImage = ({ items = [] }) => {
                 <h3>{item.title}</h3>
               </div>
             </div>
-          </a>
+          </ConditionalLink>
         ))}
       </div>
     </div>

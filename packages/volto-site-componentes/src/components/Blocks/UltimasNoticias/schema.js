@@ -52,7 +52,7 @@ export const ultimasSchema = (props) => {
           ],
         ],
         type: 'string',
-        default: 'right',
+        default: 'Padrão',
       },
     },
     required: ['options'],

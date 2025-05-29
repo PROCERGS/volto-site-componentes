@@ -1,21 +1,17 @@
 import React from 'react';
 import PreviewImg from '../../../PreviewImg/PreviewImg';
 import './GridProg.css';
+import { ConditionalLink } from '@plone/volto/components';
 
-const GridProg = ({ items = [] }) => {
+const GridProg = ({ items = [], isEditMode }) => {
   return (
     <div className="prog-grid">
       <div className="prog-grid-link">
         {items.map((item, index) => (
-          <a
-            href={
-              item['@type'] === 'Link'
-                ? item.getRemoteUrl
-                : item.getURL
-                  ? item.getURL
-                  : item['url']
-            }
+          <ConditionalLink
             key={item['@id']}
+            item={item}
+            condition={!isEditMode}
           >
             <div className="prog-grid-item" key={item['@id']}>
               <div className="prog-content">
@@ -30,7 +26,7 @@ const GridProg = ({ items = [] }) => {
                 />
               </div>
             </div>
-          </a>
+          </ConditionalLink>
         ))}
       </div>
     </div>
