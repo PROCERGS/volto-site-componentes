@@ -17,7 +17,7 @@
       "volto-site-componentes/*": ["./src/*"]
     }
   },
-  "include": ["**/*.ts", "**/*.tsx", "src/editor/config.jsx"],
+  "include": ["**/*.ts", "**/*.tsx"],
   "exclude": [
     "node_modules",
     "build",

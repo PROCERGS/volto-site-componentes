@@ -9,7 +9,7 @@ on:
       - ".github/workflows/code.yml"
 
 env:
-  NODE_VERSION: 20.x
+  NODE_VERSION: 22
 
 jobs:
   codeanalysis:
@@ -24,13 +24,11 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
 
-      # Set up pnpm via the official Action (instead of relying on Corepack)
-      - name: Set up pnpm
-        uses: pnpm/action-setup@v2
-        with:
-          version: 8.x  # or pin a specific version
+      - name: Enable corepack
+        run: npm i -g corepack@latest && corepack enable
 
       - name: Get pnpm store directory
+        shell: bash
         run: |
           echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
 

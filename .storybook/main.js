@@ -4,6 +4,7 @@ const path = require('path');
 
 const projectRootPath = path.resolve('.');
 const lessPlugin = require('@plone/volto/webpack-plugins/webpack-less-plugin');
+const RelativeResolverPlugin = require('@plone/volto/webpack-plugins/webpack-relative-resolver');
 const scssPlugin = require('razzle-plugin-scss');
 
 const createConfig = require('razzle/config/createConfigAsync.js');
@@ -91,18 +92,6 @@ module.exports = {
     // You can change the configuration based on that.
     // 'PRODUCTION' is used when building the static version of storybook.
 
-    // Adiciona o loader Babel para processar JSX(no caso necessário para transcrição do preview.jsx na build do storybook)
-    config.module.rules.push({
-      test: /\.(js|jsx|ts|tsx)$/,
-      exclude: /node_modules/,
-      use: {
-        loader: 'babel-loader',
-        options: {
-          presets: ['@babel/preset-env', '@babel/preset-react'],
-        },
-      },
-    });
-
     // Make whatever fine-grained changes you need
     let baseConfig;
     baseConfig = await createConfig(
@@ -159,6 +148,10 @@ module.exports = {
         ...config.resolve,
         alias: { ...config.resolve.alias, ...baseConfig.resolve.alias },
         fallback: { ...config.resolve.fallback, zlib: false },
+        plugins: [
+          ...(config.resolve.plugins || []),
+          new RelativeResolverPlugin(registry),
+        ],
       },
     };
 
@@ -176,13 +169,11 @@ module.exports = {
       // If input is in an addon, DON'T exclude it
       !addonPaths.some((p) => input.includes(p));
 
-      resultConfig.module.rules[13].include = [
-        /preview\.jsx/,
-        ...(Array.isArray(resultConfig.module.rules[13].include)
-          ? resultConfig.module.rules[13].include
-          : [resultConfig.module.rules[13].include].filter(Boolean)), // Garante que seja um array para evitar erro de include não definido
-        ...addonPaths,
-      ];
+    resultConfig.module.rules[13].include = [
+      /preview\.jsx/,
+      ...resultConfig.module.rules[13].include,
+      ...addonPaths,
+    ];
 
     const addonExtenders = registry.getAddonExtenders().map((m) => require(m));
 

@@ -1,4 +1,4 @@
-# Site Demonstração (volto-site-componentes)
+# volto-site-componentes (volto-site-componentes)
 
 Site Demonstração
 
@@ -15,6 +15,28 @@ Site Demonstração
 
 To install your project, you must choose the method appropriate to your version of Volto.
 
+
+### Volto 18 and later
+
+Add `volto-site-componentes` to your `package.json`:
+
+```json
+"dependencies": {
+    "volto-site-componentes": "*"
+}
+```
+
+Add `volto-site-componentes` to your `volto.config.js`:
+
+```javascript
+const addons = ['volto-site-componentes'];
+```
+
+If this package provides a Volto theme, and you want to activate it, then add the following to your `volto.config.js`:
+
+```javascript
+const theme = 'volto-site-componentes';
+```
 
 ### Volto 17 and earlier
 
@@ -50,28 +72,6 @@ Start volto with:
 yarn start
 ```
 
-### Volto 18 and later
-
-Add `volto-site-componentes` to your `package.json`:
-
-```json
-"dependencies": {
-    "volto-site-componentes": "*"
-}
-```
-
-Add `volto-site-componentes` to your `volto.config.js`:
-
-```javascript
-const addons = ['volto-site-componentes'];
-```
-
-If this package provides a Volto theme, and you want to activate it, then add the following to your `volto.config.js`:
-
-```javascript
-const theme = 'volto-site-componentes';
-```
-
 ## Test installation
 
 Visit http://localhost:3000/ in a browser, login, and check the awesome new features.
@@ -83,11 +83,29 @@ The development of this add-on is done in isolation using a new approach using p
 For this reason, it only works with pnpm and Volto 18 (currently in alpha).
 
 
-### Pre-requisites
+### Prerequisites ✅
 
--   [Node.js](https://6.docs.plone.org/install/create-project.html#node-js)
--   [Make](https://6.docs.plone.org/install/create-project.html#make)
--   [Docker](https://6.docs.plone.org/install/create-project.html#docker)
+-   An [operating system](https://6.docs.plone.org/install/create-project-cookieplone.html#prerequisites-for-installation) that runs all the requirements mentioned.
+-   [nvm](https://6.docs.plone.org/install/create-project-cookieplone.html#nvm)
+-   [Node.js and pnpm](https://6.docs.plone.org/install/create-project.html#node-js) 22
+-   [Make](https://6.docs.plone.org/install/create-project-cookieplone.html#make)
+-   [Git](https://6.docs.plone.org/install/create-project-cookieplone.html#git)
+-   [Docker](https://docs.docker.com/get-started/get-docker/) (optional)
+
+### Installation 🔧
+
+1.  Clone this repository, then change your working directory.
+
+    ```shell
+    git clone git@github.com:procergs/volto-site-componentes.git
+    cd volto-site-componentes
+    ```
+
+2.  Install this code base.
+
+    ```shell
+    make install
+    ```
 
 
 ### Make convenience commands
@@ -198,6 +216,6 @@ make acceptance-test
 
 The project is licensed under the MIT license.
 
-## Credits and Acknowledgements 🙏
+## Credits and acknowledgements 🙏
 
-Crafted with care by **Generated using [Cookieplone (0.8.1)](https://github.com/plone/cookieplone) and [cookiecutter-plone (7a2b499)](https://github.com/plone/cookiecutter-plone/commit/7a2b4991b472634827b1866aa5b1bf695647b7a3) on 2024-12-06 16:15:05.868891**. A special thanks to all contributors and supporters!
+Generated using [Cookieplone (0.9.7)](https://github.com/plone/cookieplone) and [cookieplone-templates (ed4fa08)](https://github.com/plone/cookieplone-templates/commit/ed4fa08f29fbca564b8871163f66a67ed5f4acf4) on 2025-06-05 17:13:48.093759. A special thanks to all contributors and supporters!

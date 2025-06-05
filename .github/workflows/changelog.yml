@@ -6,7 +6,7 @@ on:
       - main
 
 env:
-  NODE_VERSION: 20.x
+  NODE_VERSION: 22
   ADDON_NAME: volto-site-componentes
 
 jobs:
@@ -18,7 +18,7 @@ jobs:
           # Fetch all history
           fetch-depth: '0'
 
-      - name: Install pipx (for Towncrier)
+      - name: Install pipx
         run: pip install towncrier
 
       - name: Use Node.js
@@ -26,14 +26,11 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
 
-      # Install pnpm directly (bypassing the built-in Corepack GPG checks)
-      - name: Set up pnpm
-        uses: pnpm/action-setup@v2
-        with:
-          # Optionally pin a specific version or use a range (e.g. 8.x)
-          version: 8.x
+      - name: Enable corepack
+        run: npm i -g corepack@latest && corepack enable
 
       - name: Get pnpm store directory
+        shell: bash
         run: |
           echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
 
@@ -46,12 +43,14 @@ jobs:
             ${{ runner.os }}-pnpm-store-
 
       - name: Install dependencies
-        run: make install
+        run: |
+          make install
 
       - name: Check for presence of a Change Log fragment (only pull requests)
         run: |
-          # Fetch the pull request's base branch so towncrier can compare
-          # the current branch with the base branch.
+          # Fetch the pull request' base branch so towncrier will be able to
+          # compare the current branch with the base branch.
+          # Source: https://github.com/actions/checkout/#fetch-all-branches.
           git fetch --no-tags origin ${BASE_BRANCH}
           towncrier check --dir packages/${ADDON_NAME}
         env:

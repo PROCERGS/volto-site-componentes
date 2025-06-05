@@ -9,7 +9,7 @@ on:
       - ".github/workflows/unit.yml"
 
 env:
-  NODE_VERSION: 20.x
+  NODE_VERSION: 22
 
 jobs:
   unit:
@@ -24,12 +24,8 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
 
-      # Install pnpm directly, bypassing Corepack’s (outdated) TUF checks
-      - name: Set up pnpm
-        uses: pnpm/action-setup@v2
-        with:
-          # Optionally pin a specific version or use a range (e.g. 8.x)
-          version: 8.x
+      - name: Enable corepack
+        run: npm i -g corepack@latest && corepack enable
 
       - name: Get pnpm store directory
         shell: bash

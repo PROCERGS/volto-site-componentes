@@ -9,7 +9,7 @@ on:
       - ".github/workflows/i18n.yml"
 
 env:
-  NODE_VERSION: 20.x
+  NODE_VERSION: 22
 
 jobs:
   unit:
@@ -24,12 +24,8 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
 
-      # Install pnpm directly, bypassing Corepack’s outdated TUF keys.
-      - name: Set up pnpm
-        uses: pnpm/action-setup@v2
-        with:
-          # You can pin a specific version or use a range like '8.x'
-          version: 8.x
+      - name: Enable corepack
+        run: npm i -g corepack@latest && corepack enable
 
       - name: Get pnpm store directory
         shell: bash
@@ -47,5 +43,5 @@ jobs:
       - name: Install dependencies
         run: make install
 
-      - name: Test i18n command
+      - name: test i18n command
         run: make i18n

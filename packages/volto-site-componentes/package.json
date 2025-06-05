@@ -14,7 +14,7 @@
   "homepage": "https://github.com/procergs/volto-site-componentes#readme",
   "repository": {
     "type": "git",
-    "url": "git@github.com:procergs/volto-site-componentes.git"
+    "url": "git@github.com:procergs/volto-site-componentes"
   },
   "publishConfig": {
     "access": "public"
@@ -26,6 +26,7 @@
     "release-major-alpha": "release-it major --preRelease=alpha",
     "release-alpha": "release-it --preRelease=alpha"
   },
+  "addons": [],
   "dependencies": {
     "react-slick": "0.25.2",
 
