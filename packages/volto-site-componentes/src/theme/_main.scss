@@ -7,3 +7,11 @@
 *:after {
   box-sizing: border-box;
 }
+
+#page-document .blocks-group-wrapper > p {
+  max-width: var(--default-container-width);
+}
+
+.ui.container.tags {
+  max-width: var(--default-container-width) !important;
+}
