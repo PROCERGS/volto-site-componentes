@@ -9,7 +9,7 @@ on:
       - ".github/workflows/storybook.yml"
 
 env:
-  NODE_VERSION: 22
+  NODE_VERSION: 20.x
 
 permissions:
   contents: write
