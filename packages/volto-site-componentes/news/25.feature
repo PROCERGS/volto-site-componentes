@@ -1,1 +1,0 @@
-Estudo sobre testes (@blakolukas)
