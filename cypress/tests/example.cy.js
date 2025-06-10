@@ -11,7 +11,7 @@ context('Example Acceptance Tests', () => {
       cy.autologin();
     });
 
-    it('As editor I can add edit a Page', function () {Add commentMore actions
+    it('As editor I can add edit a Page', function () {
       cy.visit('/document');
       cy.wait(2000);
       cy.navigate('/document/edit');
