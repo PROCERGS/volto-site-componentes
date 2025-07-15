@@ -29,16 +29,24 @@ const Template = (args) => <GridServicos {...args} />;
 
 // Mock service items
 //botar true para testar com imagem
-const createServiceItem = (id, title, subtitle, description, hasImage = false) => ({
+const createServiceItem = (
+  id,
+  title,
+  subtitle,
+  description,
+  hasImage = false,
+) => ({
   '@id': `/servicos/servico-${id}`,
   title: title,
   subtitle: subtitle,
   description: description,
   image_field: hasImage ? 'preview_image' : null,
   image_caption: `Imagem do ${title}`,
-  preview_image: hasImage ? {
-    download: `https://placehold.co/600x400`,
-  } : 'https://placehold.co/600x400',
+  preview_image: hasImage
+    ? {
+        download: `https://placehold.co/600x400`,
+      }
+    : 'https://placehold.co/600x400',
 });
 
 export const Default = Template.bind({});
@@ -48,19 +56,19 @@ Default.args = {
       1,
       'Carteira de Identidade',
       'Emissão de RG',
-      'Solicite a emissão ou segunda via da sua carteira de identidade de forma rápida e prática.'
+      'Solicite a emissão ou segunda via da sua carteira de identidade de forma rápida e prática.',
     ),
     createServiceItem(
       2,
       'Licenciamento de Veículos',
       'DETRAN',
-      'Realize o licenciamento anual do seu veículo e mantenha sua documentação em dia.'
+      'Realize o licenciamento anual do seu veículo e mantenha sua documentação em dia.',
     ),
     createServiceItem(
       3,
       'Atestado de Antecedentes',
       'Polícia Civil',
-      'Obtenha seu atestado de antecedentes criminais para fins diversos.'
+      'Obtenha seu atestado de antecedentes criminais para fins diversos.',
     ),
   ],
   isEditMode: false,
@@ -69,9 +77,24 @@ Default.args = {
 export const ManyServices = Template.bind({});
 ManyServices.args = {
   items: [
-    createServiceItem(1, 'IPTU', 'Tributos', 'Consulte e pague seu IPTU online'),
-    createServiceItem(2, 'Água e Esgoto', 'CORSAN', 'Segunda via de contas e serviços'),
-    createServiceItem(3, 'Energia Elétrica', 'CEEE', 'Consultas e solicitações'),
+    createServiceItem(
+      1,
+      'IPTU',
+      'Tributos',
+      'Consulte e pague seu IPTU online',
+    ),
+    createServiceItem(
+      2,
+      'Água e Esgoto',
+      'CORSAN',
+      'Segunda via de contas e serviços',
+    ),
+    createServiceItem(
+      3,
+      'Energia Elétrica',
+      'CEEE',
+      'Consultas e solicitações',
+    ),
     createServiceItem(4, 'Saúde', 'SUS', 'Agendamento de consultas e exames'),
     createServiceItem(5, 'Educação', 'Matrícula', 'Matrícula na rede pública'),
     createServiceItem(6, 'Transporte', 'Cartão TRI', 'Solicitação e recarga'),
@@ -82,7 +105,12 @@ ManyServices.args = {
 export const EditMode = Template.bind({});
 EditMode.args = {
   items: [
-    createServiceItem(1, 'Serviço em Edição', 'Subtítulo', 'Descrição do serviço'),
+    createServiceItem(
+      1,
+      'Serviço em Edição',
+      'Subtítulo',
+      'Descrição do serviço',
+    ),
     createServiceItem(2, 'Outro Serviço', 'Mais info', 'Outra descrição'),
   ],
   isEditMode: true,
@@ -96,14 +124,14 @@ WithoutImages.args = {
       'Serviço sem Imagem',
       'Informação',
       'Este serviço não possui imagem associada',
-      false
+      false,
     ),
     createServiceItem(
       2,
       'Outro sem Imagem',
       'Detalhes',
       'Também não tem imagem',
-      false
+      false,
     ),
   ],
   isEditMode: false,
@@ -116,14 +144,9 @@ LongContent.args = {
       1,
       'Serviço com Título Muito Longo que Pode Quebrar em Múltiplas Linhas',
       'Subtítulo também extenso com várias informações',
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.'
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.',
     ),
-    createServiceItem(
-      2,
-      'Título Normal',
-      'Subtítulo',
-      'Descrição curta'
-    ),
+    createServiceItem(2, 'Título Normal', 'Subtítulo', 'Descrição curta'),
   ],
   isEditMode: false,
 };
@@ -135,7 +158,7 @@ SingleService.args = {
       1,
       'Serviço Único',
       'Informação Completa',
-      'Este é o único serviço disponível nesta seção.'
+      'Este é o único serviço disponível nesta seção.',
     ),
   ],
   isEditMode: false,

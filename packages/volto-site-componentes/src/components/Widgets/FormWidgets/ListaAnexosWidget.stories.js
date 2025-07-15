@@ -53,7 +53,6 @@ Default.args = {
   id: 'anexos',
   title: 'Anexos',
   placeholder: 'Selecione arquivos',
-  onChange: (id, value) => console.log('Changed:', { id, value }),
 };
 
 export const WithFiles = Template.bind({});
@@ -65,7 +64,6 @@ WithFiles.args = {
     createMockFile('relatorio.pdf', 1024 * 1024),
     createMockFile('comprovante.jpg', 1024 * 300),
   ],
-  onChange: (id, value) => console.log('Changed:', { id, value }),
 };
 
 export const Required = Template.bind({});
@@ -74,7 +72,6 @@ Required.args = {
   title: 'Anexos Obrigatórios',
   required: true,
   placeholder: 'Selecione arquivos',
-  onChange: (id, value) => console.log('Changed:', { id, value }),
 };
 
 export const WithError = Template.bind({});
@@ -82,7 +79,6 @@ WithError.args = {
   id: 'anexos',
   title: 'Anexos',
   error: 'Por favor, adicione pelo menos um arquivo',
-  onChange: (id, value) => console.log('Changed:', { id, value }),
 };
 
 export const Disabled = Template.bind({});
@@ -91,15 +87,14 @@ Disabled.args = {
   title: 'Anexos',
   value: [createMockFile('arquivo-existente.pdf', 1024 * 800)],
   disabled: true,
-  onChange: (id, value) => console.log('Changed:', { id, value }),
 };
 
 export const WithDescription = Template.bind({});
 WithDescription.args = {
   id: 'anexos',
   title: 'Upload de Documentos',
-  description: 'Formatos aceitos: PDF, JPG, PNG. Tamanho máximo: 5MB por arquivo. Limite: 5 arquivos.',
-  onChange: (id, value) => console.log('Changed:', { id, value }),
+  description:
+    'Formatos aceitos: PDF, JPG, PNG. Tamanho máximo: 5MB por arquivo. Limite: 5 arquivos.',
 };
 
 export const MaxFiles = Template.bind({});
@@ -114,5 +109,4 @@ MaxFiles.args = {
     createMockFile('arquivo5.pdf', 1024 * 900),
   ],
   description: 'Limite máximo de 5 arquivos atingido',
-  onChange: (id, value) => console.log('Changed:', { id, value }),
 };

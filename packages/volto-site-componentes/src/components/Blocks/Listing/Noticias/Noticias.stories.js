@@ -35,16 +35,22 @@ const createNewsItem = (id, title, subject, hasImage = false) => ({
   Subject: subject ? [subject] : [],
   image_field: hasImage ? 'preview_image' : null,
   image_caption: `Imagem da notícia: ${title}`,
-  preview_image: hasImage ? {
-    download: `https://via.placeholder.com/400x250/dc3545/ffffff?text=Noticia+${id}`,
-  } : null,
+  preview_image: hasImage
+    ? {
+        download: `https://via.placeholder.com/400x250/dc3545/ffffff?text=Noticia+${id}`,
+      }
+    : null,
 });
 
 export const Default = Template.bind({});
 Default.args = {
   items: [
     createNewsItem(1, 'Governo anuncia novo programa social', 'Política'),
-    createNewsItem(2, 'Obras de infraestrutura começam no próximo mês', 'Infraestrutura'),
+    createNewsItem(
+      2,
+      'Obras de infraestrutura começam no próximo mês',
+      'Infraestrutura',
+    ),
     createNewsItem(3, 'Secretaria de Saúde amplia atendimento', 'Saúde'),
     createNewsItem(4, 'Educação recebe novos investimentos', 'Educação'),
   ],
@@ -55,7 +61,11 @@ export const ManyNews = Template.bind({});
 ManyNews.args = {
   items: [
     createNewsItem(1, 'Notícia importante sobre economia', 'Economia'),
-    createNewsItem(2, 'Evento cultural acontece neste fim de semana', 'Cultura'),
+    createNewsItem(
+      2,
+      'Evento cultural acontece neste fim de semana',
+      'Cultura',
+    ),
     createNewsItem(3, 'Esporte local ganha destaque nacional', 'Esporte'),
     createNewsItem(4, 'Tecnologia chega às escolas públicas', 'Tecnologia'),
     createNewsItem(5, 'Meio ambiente é tema de nova campanha', 'Meio Ambiente'),
@@ -102,17 +112,17 @@ LongTitles.args = {
     createNewsItem(
       1,
       'Título muito longo que pode quebrar em múltiplas linhas no layout da grade de notícias',
-      'Categoria Extensa'
+      'Categoria Extensa',
     ),
     createNewsItem(
       2,
       'Governo Federal anuncia pacote de medidas econômicas para estimular o crescimento',
-      'Economia'
+      'Economia',
     ),
     createNewsItem(
       3,
       'Conferência Internacional sobre Mudanças Climáticas acontece na próxima semana',
-      'Meio Ambiente'
+      'Meio Ambiente',
     ),
   ],
   isEditMode: false,

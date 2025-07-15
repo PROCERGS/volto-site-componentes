@@ -16,9 +16,24 @@ export default {
 
 const mockMenuItems = [
   { '@id': '/home', Title: 'Home', getURL: '/', '@type': 'Document' },
-  { '@id': '/sobre', Title: 'Sobre Nós', getURL: '/sobre', '@type': 'Document' },
-  { '@id': '/servicos', Title: 'Serviços', getURL: '/servicos', '@type': 'Document' },
-  { '@id': '/contato', Title: 'Contato', getURL: '/contato', '@type': 'Document' },
+  {
+    '@id': '/sobre',
+    Title: 'Sobre Nós',
+    getURL: '/sobre',
+    '@type': 'Document',
+  },
+  {
+    '@id': '/servicos',
+    Title: 'Serviços',
+    getURL: '/servicos',
+    '@type': 'Document',
+  },
+  {
+    '@id': '/contato',
+    Title: 'Contato',
+    getURL: '/contato',
+    '@type': 'Document',
+  },
 ];
 
 const createStoreWithItems = (items = mockMenuItems, currentPath = '/') => {
@@ -36,14 +51,14 @@ const createStoreWithItems = (items = mockMenuItems, currentPath = '/') => {
       },
     },
   });
-  
+
   // Override dispatch to return a Promise
   const originalDispatch = store.dispatch;
   store.dispatch = (action) => {
     originalDispatch(action);
     return Promise.resolve();
   };
-  
+
   return store;
 };
 

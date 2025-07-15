@@ -34,9 +34,11 @@ const createProgramItem = (id, title, hasImage = false) => ({
   title: title,
   image_field: hasImage ? 'preview_image' : null,
   image_caption: `Caption for ${title}`,
-  preview_image: hasImage ? {
-    download: `https://placehold.co/600x400`,
-  } : 'https://placehold.co/600x400',
+  preview_image: hasImage
+    ? {
+        download: `https://placehold.co/600x400`,
+      }
+    : 'https://placehold.co/600x400',
 });
 
 export const Default = Template.bind({});
@@ -95,10 +97,22 @@ MixedContent.args = {
 export const LongTitles = Template.bind({});
 LongTitles.args = {
   items: [
-    createProgramItem(1, 'Programa Nacional de Desenvolvimento Sustentável e Inclusão Social'),
-    createProgramItem(2, 'Programa de Apoio às Micro e Pequenas Empresas Regionais'),
-    createProgramItem(3, 'Programa de Modernização da Gestão Pública Municipal'),
-    createProgramItem(4, 'Programa de Formação Continuada para Profissionais da Educação'),
+    createProgramItem(
+      1,
+      'Programa Nacional de Desenvolvimento Sustentável e Inclusão Social',
+    ),
+    createProgramItem(
+      2,
+      'Programa de Apoio às Micro e Pequenas Empresas Regionais',
+    ),
+    createProgramItem(
+      3,
+      'Programa de Modernização da Gestão Pública Municipal',
+    ),
+    createProgramItem(
+      4,
+      'Programa de Formação Continuada para Profissionais da Educação',
+    ),
   ],
   isEditMode: false,
 };

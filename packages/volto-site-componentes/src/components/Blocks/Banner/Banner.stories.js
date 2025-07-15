@@ -41,21 +41,27 @@ TwoBanners.args = {
 
 export const DifferentSizes = Template.bind({});
 DifferentSizes.args = {
-  banner1: [{
-    '@id': '/banners/wide',
-    url: 'https://via.placeholder.com/600x200/28a745/ffffff?text=Wide+Banner',
-    alt: 'Wide Banner',
-  }],
-  banner2: [{
-    '@id': '/banners/square',
-    url: 'https://via.placeholder.com/300x300/dc3545/ffffff?text=Square',
-    alt: 'Square Banner',
-  }],
-  banner3: [{
-    '@id': '/banners/tall',
-    url: 'https://via.placeholder.com/300x400/ffc107/000000?text=Tall',
-    alt: 'Tall Banner',
-  }],
+  banner1: [
+    {
+      '@id': '/banners/wide',
+      url: 'https://via.placeholder.com/600x200/28a745/ffffff?text=Wide+Banner',
+      alt: 'Wide Banner',
+    },
+  ],
+  banner2: [
+    {
+      '@id': '/banners/square',
+      url: 'https://via.placeholder.com/300x300/dc3545/ffffff?text=Square',
+      alt: 'Square Banner',
+    },
+  ],
+  banner3: [
+    {
+      '@id': '/banners/tall',
+      url: 'https://via.placeholder.com/300x400/ffc107/000000?text=Tall',
+      alt: 'Tall Banner',
+    },
+  ],
   isEditMode: false,
 };
 
@@ -64,7 +70,6 @@ EditMode.args = {
   banner1: [createBanner(1, 'Edit Mode Banner')],
   isEditMode: true,
 };
-
 
 export const Empty = Template.bind({});
 Empty.args = {
