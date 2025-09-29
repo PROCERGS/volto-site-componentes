@@ -92,15 +92,6 @@ const BarraAcessibilidade = ({ svgImage }) => {
     <div className="acessibilidade">
       <div className="acess-container">
         <div className="acess-wrapper">
-          {svgImage && (
-            <div className="acess-svg">
-              {typeof svgImage === 'string' ? (
-                <img src={svgImage} alt="Logo" />
-              ) : (
-                svgImage
-              )}
-            </div>
-          )}
           <div className="acess-menus">
             <div className="acess-right">
               <ul className="acess-ul">
@@ -152,7 +143,6 @@ const BarraAcessibilidade = ({ svgImage }) => {
                       width={'16px'}
                       id="btn-contraste"
                     />
-                    Contraste
                   </span>
                 </li>
                 <li>
@@ -162,7 +152,6 @@ const BarraAcessibilidade = ({ svgImage }) => {
                       height={'16px'}
                       width={'16px'}
                     />
-                    Ouvidoria
                   </a>
                 </li>
                 <li>
@@ -172,7 +161,6 @@ const BarraAcessibilidade = ({ svgImage }) => {
                       height={'16px'}
                       width={'16px'}
                     />
-                    Mapa do Site
                   </Link>
                 </li>
               </ul>
