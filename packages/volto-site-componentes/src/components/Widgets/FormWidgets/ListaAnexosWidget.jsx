@@ -21,21 +21,49 @@ const ListaAnexosWidget = ({
   const [fileError, setFileError] = useState(externalError);
   const inputRef = useRef(null);
 
-  const handleFilesChange = (e) => {
-    const files = Array.from(e.target.files);
-    addFiles(files);
+  const toBase64 = (file) =>
+    new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onload = () => {
+        const result = reader.result || '';
+        const base64 = typeof result === 'string' ? result.split(',')[1] : '';
+        resolve({
+          filename: file.name,
+          'content-type': file.type || 'application/octet-stream',
+          data: base64,
+          size: file.size,
+        });
+      };
+      reader.onerror = () => reject(reader.error);
+      reader.readAsDataURL(file);
+    });
+
+  const normalizeExisting = (item) => {
+    if (!item) return { name: '', size: 0 };
+    return {
+      name: item.name || item.filename || '',
+      size: item.size || item.filesize || 0,
+    };
   };
 
-  const addFiles = (files) => {
-    const currentFiles = value || [];
-    const filteredFiles = files.filter(
-      (newFile) =>
-        !currentFiles.some(
-          (existingFile) =>
-            existingFile.name === newFile.name &&
-            existingFile.size === newFile.size,
-        ),
-    );
+  const handleFilesChange = async (e) => {
+    const files = Array.from(e.target.files);
+    await addFiles(files);
+  };
+
+  const addFiles = async (files) => {
+    const currentFiles = Array.isArray(value) ? value.filter(Boolean) : [];
+
+    const filteredFiles = files.filter((newFile) => {
+      const { name: newName, size: newSize } = {
+        name: newFile.name,
+        size: newFile.size,
+      };
+      return !currentFiles.some((existing) => {
+        const { name, size } = normalizeExisting(existing);
+        return name === newName && size === newSize;
+      });
+    });
 
     if (currentFiles.length + filteredFiles.length > MAX_FILES) {
       setFileError(`Você pode adicionar no máximo ${MAX_FILES} arquivos.`);
@@ -53,20 +81,25 @@ const ListaAnexosWidget = ({
     }
 
     if (filteredFiles.length > 0) {
-      const newValue = [...currentFiles, ...filteredFiles];
-      onChange(id, newValue);
-      setTouched(true);
-      setFileError(null);
+      try {
+        const attachments = await Promise.all(filteredFiles.map(toBase64));
+        const newValue = [...currentFiles, ...attachments];
+        onChange(id, newValue);
+        setTouched(true);
+        setFileError(null);
+      } catch (err) {
+        setFileError('Não foi possível ler os arquivos. Tente novamente.');
+      }
     }
     if (inputRef.current) inputRef.current.value = '';
   };
 
-  const handleDrop = (e) => {
+  const handleDrop = async (e) => {
     e.preventDefault();
     setDragActive(false);
     if (disabled) return;
     const files = Array.from(e.dataTransfer.files);
-    addFiles(files);
+    await addFiles(files);
   };
 
   const handleDragOver = (e) => {
