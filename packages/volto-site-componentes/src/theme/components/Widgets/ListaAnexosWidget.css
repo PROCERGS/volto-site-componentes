@@ -89,14 +89,16 @@
   cursor: pointer;
 }
 
-.lista-anexos-remove .icon.trash {
-  color: rgba(0, 0, 0, 0.6);
+.lista-anexos-remove {
   transition: color 0.2s;
 }
 
-.lista-anexos-remove:hover .icon.trash,
-.lista-anexos-remove:focus .icon.trash {
-  color: #d01157;
+.lista-anexos-remove .icon-trash-svg {
+  display: inline-block;
+  width: 0.675em;
+  height: 0.675em;
+  vertical-align: middle;
+  fill: currentColor;
 }
 
 .lista-anexos-error {
@@ -104,5 +106,5 @@
   border: none;
   margin-top: 20px !important;
   background: none;
-  color: #d01157 !important;
+  color: var(--verde-padrao) !important;
 }
