@@ -97,8 +97,8 @@
   display: inline-block;
   width: 0.675em;
   height: 0.675em;
-  vertical-align: middle;
   fill: currentColor;
+  vertical-align: middle;
 }
 
 .lista-anexos-error {
