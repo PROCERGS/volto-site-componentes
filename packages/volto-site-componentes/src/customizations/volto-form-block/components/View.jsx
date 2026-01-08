@@ -237,15 +237,14 @@ const View = ({ data, id, path }) => {
 
           console.log(attachments);
           if (attachments && typeof attachments === 'object') {
-            
             const flattenedAttachments = {};
-            
+
             Object.entries(attachments).forEach(([fieldName, value]) => {
               if (Array.isArray(value)) {
                 value.forEach((file, index) => {
                   // Create unique key: originalField_index
                   const uniqueKey = `${fieldName}_${index}`;
-                  
+
                   flattenedAttachments[uniqueKey] = {
                     data: file.data,
                     encoding: file.encoding,
@@ -262,8 +261,8 @@ const View = ({ data, id, path }) => {
 
             attachments = flattenedAttachments;
           }
-          console.log("after", attachments);
-          
+          console.log('after', attachments);
+
           dispatch(
             submitForm(
               path,
