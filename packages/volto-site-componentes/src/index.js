@@ -196,6 +196,11 @@ const applyConfig = (config) => {
     isValid: (formData, name) => true,
   });
 
+  config.blocks.blocksConfig.form.attachment_fields = [
+    ...(config.blocks.blocksConfig.form.attachment_fields || []),
+    'ListaAnexosWidget',
+  ];
+
   config.blocks.blocksConfig.banner = {
     id: 'banner',
     title: 'Banner',

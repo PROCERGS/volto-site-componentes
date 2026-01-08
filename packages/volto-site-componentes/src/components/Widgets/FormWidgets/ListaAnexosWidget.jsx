@@ -26,11 +26,16 @@ const ListaAnexosWidget = ({
       const reader = new FileReader();
       reader.onload = () => {
         const result = reader.result || '';
-        const base64 = typeof result === 'string' ? result.split(',')[1] : '';
+        const [, contentType, encoding, base64] =
+          typeof result === 'string'
+            ? result.match(/^data:(.*);(.*),(.*)$/)
+            : [];
         resolve({
           filename: file.name,
-          'content-type': file.type || 'application/octet-stream',
-          data: base64,
+          'content-type':
+            contentType || file.type || 'application/octet-stream',
+          encoding: encoding || 'base64', // <-- add this
+          data: base64 || '',
           size: file.size,
         });
       };
