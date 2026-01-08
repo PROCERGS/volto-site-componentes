@@ -235,7 +235,6 @@ const View = ({ data, id, path }) => {
             }
           });
 
-          console.log(attachments);
           if (attachments && typeof attachments === 'object') {
             const flattenedAttachments = {};
 
@@ -261,7 +260,6 @@ const View = ({ data, id, path }) => {
 
             attachments = flattenedAttachments;
           }
-          console.log('after', attachments);
 
           dispatch(
             submitForm(
