@@ -39,7 +39,7 @@
     "@fortawesome/react-fontawesome": "0.2.2",
     "@fortawesome/free-solid-svg-icons": "6.7.2",
     
-    "volto-form-block": "3.7.2"
+    "volto-form-block": "3.17.0"
 
   },
   "peerDependencies": {
