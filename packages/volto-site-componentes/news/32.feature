@@ -1,1 +1,0 @@
-tirando svg da acessibilidade (@blakolukas)

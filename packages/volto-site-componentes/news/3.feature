@@ -1,1 +1,0 @@
-Bloco Imagem com descrição (@avsinacio)

@@ -1,1 +1,0 @@
-removendo advanced listing (@blakolukas)
