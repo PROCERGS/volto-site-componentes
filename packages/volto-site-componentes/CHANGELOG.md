@@ -8,6 +8,14 @@
 
 <!-- towncrier release notes start -->
 
+## 1.0.1 (2026-02-19)
+
+
+### Bugfix
+
+- Corrige edição de formulário (@samoel-silva)
+
+
 ## 1.0.0 (2026-01-12)
 
 
