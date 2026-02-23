@@ -239,6 +239,10 @@ const View = ({ data, id, path }) => {
             const flattenedAttachments = {};
 
             Object.entries(attachments).forEach(([fieldName, value]) => {
+              if (!value) {
+                // Skip undefined or null values
+                return;
+              }
               if (Array.isArray(value)) {
                 value.forEach((file, index) => {
                   // Create unique key: originalField_index
@@ -310,7 +314,10 @@ const View = ({ data, id, path }) => {
     if (submitResults?.loaded) {
       setFormState({
         type: FORM_STATES.success,
-        result: intl.formatMessage(messages.formSubmitted),
+        result: {
+          message: intl.formatMessage(messages.formSubmitted),
+          ...submitResults.result,
+        },
       });
       captcha.reset();
       const formItem = document.getElementById(formid);
