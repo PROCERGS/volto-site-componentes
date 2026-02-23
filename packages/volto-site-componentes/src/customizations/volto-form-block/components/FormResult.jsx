@@ -20,7 +20,7 @@ const replaceMessage = (text, sent_data) => {
   if (!Array.isArray(sent_data)) {
     return text;
   }
-  
+
   let i = 0;
   while (i < sent_data.length) {
     let idField = getFieldName(sent_data[i].label, sent_data[i].field_id);
