@@ -8,6 +8,15 @@
 
 <!-- towncrier release notes start -->
 
+## 1.0.2 (2026-02-24)
+
+
+### Bugfix
+
+- Corrige camel case em css da barra do estado (samoel-silva)
+- corrige submissão de formulário com lista anexos vazio (@samoel-silva)
+
+
 ## 1.0.1 (2026-02-19)
 
 
