@@ -105,7 +105,7 @@ const BarraEstado = () => {
                       width="49.94px"
                       height="13.21px"
                       viewBox="0 0 49.94 13.21"
-                      enable-background="new 0 0 49.94 13.21"
+                      enableBackground="new 0 0 49.94 13.21"
                     >
                       <title>GurIA</title>
                       <desc>A tua nova assistente digital</desc>{' '}

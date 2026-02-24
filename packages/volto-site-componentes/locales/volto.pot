@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2025-05-28T19:15:46.756Z\n"
+"POT-Creation-Date: 2026-02-23T14:14:58.179Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -93,6 +93,11 @@ msgstr ""
 msgid "First Image"
 msgstr ""
 
+#. Default: "Fonte"
+#: components/Blocks/NoticiasComDestaque/schema
+msgid "Fonte"
+msgstr ""
+
 #. Default: "Imagem"
 #: components/Blocks/ImagemTexto/schema
 msgid "Imagem"
@@ -127,6 +132,11 @@ msgstr ""
 #. Default: "Título do menu lateral"
 #: components/Blocks/MenuLateral/schema
 msgid "Menu Lateral Descrição"
+msgstr ""
+
+#. Default: "Notícias com destaque"
+#: components/Blocks/NoticiasComDestaque/schema
+msgid "Notícias com destaque"
 msgstr ""
 
 #. Default: "Opções"
@@ -187,4 +197,9 @@ msgstr ""
 #. Default: "Título a ser descrito no menu lateral"
 #: components/Blocks/MenuLateral/schema
 msgid "Título Descrição"
+msgstr ""
+
+#. Default: "Título da lista à direita"
+#: components/Blocks/NoticiasComDestaque/schema
+msgid "Título direita"
 msgstr ""

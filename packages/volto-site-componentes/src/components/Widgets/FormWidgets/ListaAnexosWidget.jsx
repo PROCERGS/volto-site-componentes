@@ -183,7 +183,7 @@ const ListaAnexosWidget = ({
           Escolher arquivos
         </label>
         <div className="lista-anexos-list-wrapper">
-          {value && value.length > 0 && (
+          {Array.isArray(value) && value.length > 0 && (
             <ul className="lista-anexos-list">
               {value.map((file, idx) => (
                 <li key={idx} className="lista-anexos-item">
